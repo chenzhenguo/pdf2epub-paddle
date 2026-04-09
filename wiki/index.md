@@ -269,8 +269,99 @@ sequenceDiagram
 - **Asynchronous Processing**: Process large files asynchronously
 - **Load Balancing**: Distribute requests across multiple instances
 
-## 10. Conclusion
+## 10. Molecular Architecture
+
+### 10.1 Frontend Molecular Components
+
+#### 10.1.1 User Interface Components
+- **File Upload Component**: Handles PDF file selection and validation
+- **API Token Input Component**: Securely collects and validates API tokens
+- **Conversion Options Component**: Provides UI for configuring conversion parameters
+- **Progress Indicator Component**: Shows processing status and progress
+- **Download Component**: Manages EPUB file download
+
+#### 10.1.2 Frontend Services
+- **Form Validation Service**: Validates user input before submission
+- **File Size Checker**: Ensures uploaded files meet size requirements
+- **Local Storage Service**: Persists user preferences and settings
+
+### 10.2 Backend Molecular Components
+
+#### 10.2.1 API Layer
+- **Request Parser**: Parses and validates incoming requests
+- **File Handler**: Manages file uploads and temporary storage
+- **Response Formatter**: Formats API responses consistently
+
+#### 10.2.2 PDF Processing Layer
+- **Chunk Generator**: Creates RawTextChunk objects from PDF content
+- **Text Analyzer**: Analyzes text structure and formatting
+- **Image Extractor**: Extracts images from PDF pages
+
+#### 10.2.3 LLM Processing Layer
+- **Prompt Builder**: Constructs optimized prompts for LLM calls
+- **Response Parser**: Parses and processes LLM responses
+- **Error Handler**: Manages LLM API errors and retries
+
+#### 10.2.4 EPUB Generation Layer
+- **Content Organizer**: Organizes content into EPUB structure
+- **Metadata Builder**: Creates EPUB metadata
+- **File Assembler**: Assembles final EPUB file
+
+### 10.3 Data Models
+
+#### 10.3.1 Core Data Structures
+- **RawTextChunk**: Represents a chunk of text with page and line information
+- **Paragraph**: Represents a formatted paragraph
+- **Section**: Represents a section or chapter in the book
+- **BookStructure**: Represents the overall structure of the book
+- **ConversionOptions**: Represents user-specified conversion settings
+
+#### 10.3.2 API Data Models
+- **UploadRequest**: Schema for file upload requests
+- **ConversionResponse**: Schema for conversion results
+- **ErrorResponse**: Schema for error responses
+
+### 10.4 Integration Patterns
+
+#### 10.4.1 Component Interactions
+- **Request-Response Pattern**: For API endpoints
+- **Pipeline Pattern**: For PDF processing workflow
+- **Observer Pattern**: For progress tracking
+- **Strategy Pattern**: For different text formatting strategies
+
+#### 10.4.2 Data Flow Patterns
+- **Stream Processing**: For large PDF files
+- **Batch Processing**: For grouped operations
+- **Event-Driven**: For asynchronous processing
+
+### 10.5 Error Handling Architecture
+
+#### 10.5.1 Error Types
+- **Validation Errors**: Input validation failures
+- **Processing Errors**: PDF processing failures
+- **API Errors**: External API failures
+- **System Errors**: Internal system failures
+
+#### 10.5.2 Error Handling Strategies
+- **Retry Mechanism**: For transient errors
+- **Fallback Mechanisms**: For LLM failures
+- **Error Logging**: For debugging and monitoring
+- **User-Friendly Messages**: For end-user feedback
+
+### 10.6 Security Architecture
+
+#### 10.6.1 Authentication & Authorization
+- **API Token Validation**: Validates external API tokens
+- **Input Sanitization**: Prevents injection attacks
+- **File Type Validation**: Ensures only PDF files are processed
+
+#### 10.6.2 Data Protection
+- **Temporary File Encryption**: Secures uploaded files
+- **API Token Obfuscation**: Prevents token exposure
+- **Secure File Deletion**: Removes temporary files securely
+
+## 11. Conclusion
 
 The PDF to EPUB Converter Web Application follows a modular, well-structured architecture that provides a robust solution for converting PDF files to EPUB format. The optional LLM integration enhances the quality of the generated EPUB by providing better text formatting and structure detection. The architecture is designed to be maintainable, scalable, and extensible, with clear separation of concerns and well-defined integration points.
 
-This architecture documentation serves as a reference for developers, stakeholders, and contributors to understand the system design and make informed decisions about future enhancements and maintenance.
+This architecture documentation serves as a reference for developers, stakeholders, and contributors to understand the system design and make informed decisions about future enhancements and maintenance. The molecular architecture breakdown provides a detailed view of the system's components, interactions, and data flows, enabling more precise implementation and maintenance.
