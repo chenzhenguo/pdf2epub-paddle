@@ -8,6 +8,7 @@ from ebooklib import epub
 from typing import List, Dict, Any
 
 from app.config import CHUNK_SIZE, MAX_DAILY_PAGES, LLM_ENABLED, LLM_API_KEY, LLM_MODEL
+from app.utils.document_extractor import DocumentExtractor, RawTextChunk
 
 if LLM_ENABLED:
     from app.utils.llm_processor import LLMProcessor
@@ -15,19 +16,20 @@ if LLM_ENABLED:
 
 def extract_pdf_content(file_path: str) -> tuple:
     """
-    Extract text and images from PDF file using PyMuPDF
+    Extract text and images from PDF file using DocumentExtractor
     Returns (text, images) where images is a dict of {path: data}
     """
+    # Use DocumentExtractor for text extraction
+    extractor = DocumentExtractor()
+    chunks = extractor.extract(file_path)
+    text = extractor.get_text_from_chunks(chunks)
+    
+    # Extract images separately
     doc = fitz.open(file_path)
-    text = ""
     images = {}
     
     for page_num in range(len(doc)):
         page = doc.load_page(page_num)
-        
-        # Extract text
-        page_text = page.get_text()
-        text += page_text + "\n\n"
         
         # Extract images
         image_list = page.get_images(full=True)
@@ -164,13 +166,29 @@ def process_pdf(
     Returns (success, message)
     """
     try:
-        # Step 1: Extract content from PDF
+        # Step 1: Extract content from PDF using DocumentExtractor
         print("[-] Step 1: Extracting PDF content...")
-        text, images = extract_pdf_content(input_path)
+        extractor = DocumentExtractor()
+        chunks = extractor.extract(input_path)
+        text = extractor.get_text_from_chunks(chunks)
         
-        # Step 2: Clean and process text
-        print("[-] Step 2: Cleaning and processing text...")
-        paragraphs = clean_text(text)
+        # Extract images separately
+        doc = fitz.open(input_path)
+        images = {}
+        for page_num in range(len(doc)):
+            page = doc.load_page(page_num)
+            image_list = page.get_images(full=True)
+            for img_idx, img in enumerate(image_list):
+                xref = img[0]
+                base_image = doc.extract_image(xref)
+                image_data = base_image["image"]
+                image_path = f"image_{page_num}_{img_idx}.png"
+                images[image_path] = image_data
+        doc.close()
+        
+        # Step 2: Get paragraphs from chunks
+        print("[-] Step 2: Processing text...")
+        paragraphs = extractor.get_paragraphs_from_chunks(chunks)
         
         # Step 3: Detect book structure
         print("[-] Step 3: Detecting book structure...")

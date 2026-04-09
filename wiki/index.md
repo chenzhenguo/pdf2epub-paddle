@@ -20,19 +20,22 @@ flowchart TD
         E --> F[PDF Processor]
         F --> G[EPUB Generator]
         F --> H[LLM Processor]
+        F --> I[Document Extractor]
     end
 
     subgraph External Services
-        I[PaddleOCR API]
-        J[OpenAI API]
+        J[PaddleOCR API]
+        K[OpenAI API]
     end
 
     A -->|File Upload| E
     E -->|Process PDF| F
+    F -->|Extract Content| I
+    I -->|RawTextChunk[]| F
     F -->|Generate EPUB| G
     F -->|Format Text| H
-    H -->|API Call| J
-    F -->|Optional API Call| I
+    H -->|API Call| K
+    F -->|Optional API Call| J
     E -->|Return EPUB| A
 ```
 
@@ -40,6 +43,7 @@ flowchart TD
 
 - **Frontend**: Handles user interaction, file uploads, and display of results
 - **Backend**: Processes PDF files, generates EPUB files, and integrates with external APIs
+- **Document Extractor**: Provides a unified interface for PDF text extraction, generating a globally consistent RawTextChunk[] array
 - **External Services**: Provide OCR and LLM capabilities for enhanced processing
 
 ## 2. Frontend Architecture
@@ -77,6 +81,7 @@ webapp/app/
 - **FastAPI Application**: Main application framework
 - **API Endpoints**: RESTful endpoints for file upload and processing
 - **PDF Processor**: Handles PDF extraction and processing
+- **Document Extractor**: Provides a unified interface for PDF text extraction, generating a globally consistent RawTextChunk[] array
 - **EPUB Generator**: Generates EPUB files from processed content
 - **LLM Processor**: Integrates with OpenAI API for enhanced text formatting
 - **Configuration**: Manages environment variables and application settings
@@ -94,6 +99,7 @@ webapp/app/
 ├── config.py          # Configuration settings
 └── utils/
     ├── pdf_processor.py     # PDF processing logic
+    ├── document_extractor.py # Unified document extraction interface
     ├── epub_generator.py    # EPUB generation logic
     └── llm_processor.py     # LLM integration logic
 ```
@@ -109,8 +115,8 @@ The application uses environment variables for configuration, including:
 
 ### 4.1 Process Overview
 
-1. **PDF Extraction**: Extract text and images from PDF using PyMuPDF
-2. **Text Cleaning**: Clean and process extracted text
+1. **PDF Extraction**: Extract text and images from PDF using Document Extractor
+2. **Text Processing**: Process extracted RawTextChunk[] array into paragraphs
 3. **Structure Detection**: Detect book structure (title, author, chapters)
 4. **Text Formatting**: Format text for better readability
 5. **EPUB Generation**: Generate EPUB file from processed content
@@ -119,22 +125,24 @@ The application uses environment variables for configuration, including:
 
 ```mermaid
 flowchart TD
-    A[PDF Upload] --> B[Extract Text and Images]
-    B --> C[Clean Text]
-    C --> D{LLM Enabled?}
-    D -->|Yes| E[LLM Structure Detection]
-    D -->|No| F[Heuristic Structure Detection]
-    E --> G[LLM Text Formatting]
-    F --> H[Basic Text Formatting]
-    G --> I[Generate EPUB]
-    H --> I
-    I --> J[Return EPUB File]
+    A[PDF Upload] --> B[Document Extractor]
+    B --> C[Generate RawTextChunk[]]
+    C --> D[Process into Paragraphs]
+    D --> E{LLM Enabled?}
+    E -->|Yes| F[LLM Structure Detection]
+    E -->|No| G[Heuristic Structure Detection]
+    F --> H[LLM Text Formatting]
+    G --> I[Basic Text Formatting]
+    H --> J[Generate EPUB]
+    I --> J
+    J --> K[Return EPUB File]
 ```
 
 ### 4.3 Key Functions
 
-- `extract_pdf_content()`: Extracts text and images from PDF
-- `clean_text()`: Cleans and processes extracted text
+- `DocumentExtractor.extract()`: Extracts text from PDF and generates RawTextChunk[] array
+- `DocumentExtractor.get_paragraphs_from_chunks()`: Processes RawTextChunk[] array into paragraphs
+- `extract_pdf_content()`: Extracts text and images from PDF using DocumentExtractor
 - `detect_book_structure()`: Detects book structure using heuristics
 - `process_pdf()`: Main processing function
 - `generate_epub()`: Generates EPUB file
@@ -175,6 +183,7 @@ sequenceDiagram
     participant Frontend as Frontend
     participant Backend as Backend
     participant PDFProcessor as PDF Processor
+    participant DocExtractor as Document Extractor
     participant LLM as LLM Processor
     participant EPUBGenerator as EPUB Generator
 
@@ -182,8 +191,10 @@ sequenceDiagram
     User->>Frontend: Enter API Tokens
     User->>Frontend: Configure Options
     Frontend->>Backend: POST /convert
-    Backend->>PDFProcessor: Extract PDF Content
-    PDFProcessor->>PDFProcessor: Clean Text
+    Backend->>PDFProcessor: Process PDF
+    PDFProcessor->>DocExtractor: Extract Content
+    DocExtractor-->>PDFProcessor: Return RawTextChunk[]
+    PDFProcessor->>PDFProcessor: Process into Paragraphs
     PDFProcessor->>LLM: Detect Structure (if LLM enabled)
     LLM-->>PDFProcessor: Return Structure
     PDFProcessor->>LLM: Format Text (if LLM enabled)
@@ -196,15 +207,17 @@ sequenceDiagram
 
 ### 6.2 Data Transformation
 
-1. **PDF to Text**: Extract text and images from PDF
-2. **Text to Structured Content**: Detect book structure and format text
-3. **Structured Content to EPUB**: Generate EPUB file from structured content
+1. **PDF to RawTextChunk[]**: Extract text from PDF into RawTextChunk[] array using Document Extractor
+2. **RawTextChunk[] to Paragraphs**: Process RawTextChunk[] array into paragraphs
+3. **Text to Structured Content**: Detect book structure and format text
+4. **Structured Content to EPUB**: Generate EPUB file from structured content
 
 ## 7. Design Decisions and Best Practices
 
 ### 7.1 Key Design Decisions
 
 - **Modular Architecture**: Clear separation of concerns between components
+- **Unified Document Extractor**: Single interface for PDF text extraction, ensuring consistent RawTextChunk[] array generation
 - **Optional LLM Integration**: LLM is optional, with fallback to heuristic methods
 - **Temporary File Management**: Automatic cleanup of temporary files
 - **Error Handling**: Comprehensive error handling with user feedback
