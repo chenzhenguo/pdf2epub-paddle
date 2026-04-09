@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to EPUB Converter</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PDF to EPUB Converter</h1>
+        
+        {% if error %}
+        <div class="error-message">
+            {{ error }}
+        </div>
+        {% endif %}
+        
+        <form action="/convert" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">PDF File</label>
+                <input type="file" id="file" name="file" accept=".pdf" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="api_token">PaddleOCR API Token</label>
+                <input type="password" id="api_token" name="api_token" placeholder="Enter your API token" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="title">Book Title (Optional)</label>
+                <input type="text" id="title" name="title" placeholder="Enter book title">
+            </div>
+            
+            <div class="form-group">
+                <label for="author">Author (Optional)</label>
+                <input type="text" id="author" name="author" placeholder="Enter author name">
+            </div>
+            
+            <div class="form-group checkbox-group">
+                <label>
+                    <input type="checkbox" name="auto_toc"> Auto-generate Table of Contents
+                </label>
+            </div>
+            
+            <div class="form-group checkbox-group">
+                <label>
+                    <input type="checkbox" name="no_toc"> No Table of Contents
+                </label>
+            </div>
+            
+            <button type="submit" class="submit-button">Convert to EPUB</button>
+        </form>
+        
+        <div class="info-section">
+            <h2>How to Use</h2>
+            <ol>
+                <li>Upload your PDF file</li>
+                <li>Enter your PaddleOCR API token</li>
+                <li>Optional: Enter book title and author</li>
+                <li>Select TOC generation options</li>
+                <li>Click "Convert to EPUB"</li>
+                <li>Download the generated EPUB file</li>
+            </ol>
+        </div>
+        
+        <div class="info-section">
+            <h2>About</h2>
+            <p>This tool converts PDF files to EPUB format using PaddleOCR API for layout analysis and text extraction. It supports intelligent chapter detection and generates well-formatted EPUB files suitable for e-readers.</p>
+        </div>
+    </div>
+</body>
+</html>

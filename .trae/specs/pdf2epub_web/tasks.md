@@ -1,6 +1,6 @@
 # PDF to EPUB Converter Web App - The Implementation Plan
 
-## [ ] Task 1: Set up project structure and dependencies
+## [/] Task 1: Set up project structure and dependencies
 - **Priority**: P0
 - **Depends On**: None
 - **Description**: 
