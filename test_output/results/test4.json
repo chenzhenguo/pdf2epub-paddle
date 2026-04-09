@@ -1,0 +1,12 @@
+{
+  "test_id": "test4",
+  "test_name": "Sample Test 4 (failing)",
+  "success": false,
+  "message": "Unexpected error: Test 4 failed intentionally",
+  "duration": 0.8008308410644531,
+  "output": null,
+  "error": "Unexpected error: Test 4 failed intentionally",
+  "logs": [],
+  "timestamp": 1775740023.2584934,
+  "start_time": 1775740022.4576633
+}

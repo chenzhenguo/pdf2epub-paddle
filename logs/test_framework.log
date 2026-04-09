@@ -1,0 +1,127 @@
+2026-04-09 13:04:32,184 - test_framework - INFO - Starting enhanced test framework demonstration
+2026-04-09 13:04:32,185 - test_framework - INFO - Running all test cases with parallel execution
+2026-04-09 13:04:32,185 - test_framework - INFO - Running test group: ['Sample Test 1', 'Sample Test 2', 'Sample Test 4 (failing)', 'Sample Test 6 (timeout)']
+2026-04-09 13:04:32,187 - test_framework - ERROR - Error running test test1: 'TestCase' object has no attribute 'test_name'
+2026-04-09 13:04:32,187 - test_framework - INFO - [test1] Test result saved: ./test_output/results/test1.json
+2026-04-09 13:04:32,187 - test_framework - ERROR - Error running test test4: 'TestCase' object has no attribute 'test_name'
+2026-04-09 13:04:32,187 - test_framework - INFO - [test4] Test result saved: ./test_output/results/test4.json
+2026-04-09 13:04:32,187 - test_framework - ERROR - Error running test test2: 'TestCase' object has no attribute 'test_name'
+2026-04-09 13:04:32,188 - test_framework - INFO - [test2] Test result saved: ./test_output/results/test2.json
+2026-04-09 13:04:32,188 - test_framework - ERROR - Error running test test6: 'TestCase' object has no attribute 'test_name'
+2026-04-09 13:04:32,188 - test_framework - INFO - [test6] Test result saved: ./test_output/results/test6.json
+2026-04-09 13:04:32,188 - test_framework - INFO - Running test group: ['Sample Test 3 (depends on test1)', 'Sample Test 5 (depends on test4)']
+2026-04-09 13:04:32,189 - test_framework - ERROR - Error running test test3: 'TestCase' object has no attribute 'test_name'
+2026-04-09 13:04:32,189 - test_framework - INFO - [test3] Test result saved: ./test_output/results/test3.json
+2026-04-09 13:04:32,189 - test_framework - ERROR - Error running test test5: 'TestCase' object has no attribute 'test_name'
+2026-04-09 13:04:32,189 - test_framework - INFO - [test5] Test result saved: ./test_output/results/test5.json
+2026-04-09 13:04:32,190 - test_framework - INFO - Test Summary: {'total_tests': 6, 'passed': 0, 'failed': 6, 'success_rate': 0.0, 'avg_duration': 0.0, 'total_duration': 0, 'timestamp': 1775739872.1899722}
+2026-04-09 13:04:32,190 - test_framework - INFO - JSON report generated: ./test_reports/test_report_20260409_130432.json
+2026-04-09 13:04:32,190 - test_framework - INFO - HTML report generated: ./test_reports/test_report_20260409_130432.html
+2026-04-09 13:04:32,190 - test_framework - INFO - Test reports generated: {'json': './test_reports/test_report_20260409_130432.json', 'html': './test_reports/test_report_20260409_130432.html'}
+2026-04-09 13:04:32,191 - test_framework - INFO - Test reports generated:
+2026-04-09 13:04:32,191 - test_framework - INFO -   json: ./test_reports/test_report_20260409_130432.json
+2026-04-09 13:04:32,191 - test_framework - INFO -   html: ./test_reports/test_report_20260409_130432.html
+2026-04-09 13:04:32,191 - test_framework - INFO - 
+Running tests by tags: ['sample', 'basic']
+2026-04-09 13:04:32,191 - test_framework - INFO - Tagged Test Summary: {'total_tests': 0, 'passed': 0, 'failed': 0, 'success_rate': 0, 'avg_duration': 0, 'total_duration': 0, 'timestamp': 1775739872.1914618}
+2026-04-09 13:04:32,191 - test_framework - INFO - Enhanced test framework demonstration completed
+2026-04-09 13:05:49,542 - test_framework - INFO - Starting enhanced test framework demonstration
+2026-04-09 13:05:49,542 - test_framework - INFO - Running all test cases with parallel execution
+2026-04-09 13:05:49,542 - test_framework - INFO - Running test group: ['Sample Test 1', 'Sample Test 2', 'Sample Test 4 (failing)', 'Sample Test 6 (timeout)']
+2026-04-09 13:05:49,543 - test_framework - INFO - [test1] Starting test: Sample Test 1
+2026-04-09 13:05:49,544 - test_framework - INFO - [test2] Starting test: Sample Test 2
+2026-04-09 13:05:49,544 - test_framework - INFO - [test4] Starting test: Sample Test 4 (failing)
+2026-04-09 13:05:50,345 - test_framework - ERROR - [test4] Test failed: Sample Test 4 (failing) - Unexpected error: Test 4 failed intentionally
+2026-04-09 13:05:50,346 - test_framework - INFO - [test6] Starting test: Sample Test 6 (timeout)
+2026-04-09 13:05:50,346 - test_framework - INFO - [test4] Test result saved: ./test_output/results/test4.json
+2026-04-09 13:05:50,545 - test_framework - INFO - [test1] Test PASSED: Sample Test 1 (duration: 1.00s)
+2026-04-09 13:05:50,546 - test_framework - INFO - [test1] Test result saved: ./test_output/results/test1.json
+2026-04-09 13:05:51,045 - test_framework - INFO - [test2] Test PASSED: Sample Test 2 (duration: 1.50s)
+2026-04-09 13:05:51,045 - test_framework - INFO - [test2] Test result saved: ./test_output/results/test2.json
+2026-04-09 13:05:52,347 - test_framework - ERROR - [test6] Test failed: Sample Test 6 (timeout) - Test timed out after 2 seconds
+2026-04-09 13:05:55,347 - test_framework - INFO - [test6] Test result saved: ./test_output/results/test6.json
+2026-04-09 13:05:55,348 - test_framework - INFO - Running test group: ['Sample Test 3 (depends on test1)', 'Sample Test 5 (depends on test4)']
+2026-04-09 13:05:55,348 - test_framework - INFO - [test3] Starting test: Sample Test 3 (depends on test1)
+2026-04-09 13:05:55,348 - test_framework - INFO - [test5] Starting test: Sample Test 5 (depends on test4)
+2026-04-09 13:05:55,649 - test_framework - INFO - [test5] Test PASSED: Sample Test 5 (depends on test4) (duration: 0.30s)
+2026-04-09 13:05:55,649 - test_framework - INFO - [test5] Test result saved: ./test_output/results/test5.json
+2026-04-09 13:05:55,849 - test_framework - INFO - [test3] Test PASSED: Sample Test 3 (depends on test1) (duration: 0.50s)
+2026-04-09 13:05:55,849 - test_framework - INFO - [test3] Test result saved: ./test_output/results/test3.json
+2026-04-09 13:05:55,850 - test_framework - INFO - Test Summary: {'total_tests': 6, 'passed': 4, 'failed': 2, 'success_rate': 66.66666666666666, 'avg_duration': 1.017850120862325, 'total_duration': 6.10710072517395, 'timestamp': 1775739955.8502512}
+2026-04-09 13:05:55,850 - test_framework - INFO - JSON report generated: ./test_reports/test_report_20260409_130555.json
+2026-04-09 13:05:55,851 - test_framework - INFO - HTML report generated: ./test_reports/test_report_20260409_130555.html
+2026-04-09 13:05:55,851 - test_framework - INFO - Test reports generated: {'json': './test_reports/test_report_20260409_130555.json', 'html': './test_reports/test_report_20260409_130555.html'}
+2026-04-09 13:05:55,851 - test_framework - INFO - Test reports generated:
+2026-04-09 13:05:55,851 - test_framework - INFO -   json: ./test_reports/test_report_20260409_130555.json
+2026-04-09 13:05:55,851 - test_framework - INFO -   html: ./test_reports/test_report_20260409_130555.html
+2026-04-09 13:05:55,851 - test_framework - INFO - 
+Running tests by tags: ['sample', 'basic']
+2026-04-09 13:05:55,851 - test_framework - INFO - Tagged Test Summary: {'total_tests': 0, 'passed': 0, 'failed': 0, 'success_rate': 0, 'avg_duration': 0, 'total_duration': 0, 'timestamp': 1775739955.8519263}
+2026-04-09 13:05:55,852 - test_framework - INFO - Enhanced test framework demonstration completed
+2026-04-09 13:07:02,455 - test_framework - INFO - Starting enhanced test framework demonstration
+2026-04-09 13:07:02,455 - test_framework - INFO - Running all test cases with parallel execution
+2026-04-09 13:07:02,455 - test_framework - INFO - Running test group: ['Sample Test 1', 'Sample Test 2', 'Sample Test 4 (failing)', 'Sample Test 6 (timeout)']
+2026-04-09 13:07:02,456 - test_framework - INFO - [test1] Starting test: Sample Test 1
+2026-04-09 13:07:02,457 - test_framework - INFO - [test2] Starting test: Sample Test 2
+2026-04-09 13:07:02,457 - test_framework - INFO - [test4] Starting test: Sample Test 4 (failing)
+2026-04-09 13:07:03,258 - test_framework - ERROR - [test4] Test failed: Sample Test 4 (failing) - Unexpected error: Test 4 failed intentionally
+2026-04-09 13:07:03,258 - test_framework - INFO - [test6] Starting test: Sample Test 6 (timeout)
+2026-04-09 13:07:03,259 - test_framework - INFO - [test4] Test result saved: ./test_output/results/test4.json
+2026-04-09 13:07:03,458 - test_framework - INFO - [test1] Test PASSED: Sample Test 1 (duration: 1.00s)
+2026-04-09 13:07:03,459 - test_framework - INFO - [test1] Test result saved: ./test_output/results/test1.json
+2026-04-09 13:07:03,958 - test_framework - INFO - [test2] Test PASSED: Sample Test 2 (duration: 1.50s)
+2026-04-09 13:07:03,958 - test_framework - INFO - [test2] Test result saved: ./test_output/results/test2.json
+2026-04-09 13:07:05,259 - test_framework - ERROR - [test6] Test failed: Sample Test 6 (timeout) - Test timed out after 2 seconds
+2026-04-09 13:07:08,259 - test_framework - INFO - [test6] Test result saved: ./test_output/results/test6.json
+2026-04-09 13:07:08,259 - test_framework - INFO - Running test group: ['Sample Test 3 (depends on test1)']
+2026-04-09 13:07:08,260 - test_framework - INFO - [test3] Starting test: Sample Test 3 (depends on test1)
+2026-04-09 13:07:08,760 - test_framework - INFO - [test3] Test PASSED: Sample Test 3 (depends on test1) (duration: 0.50s)
+2026-04-09 13:07:08,761 - test_framework - INFO - [test3] Test result saved: ./test_output/results/test3.json
+2026-04-09 13:07:08,761 - test_framework - WARNING - [test5] Skipping test Sample Test 5 (depends on test4) due to failed dependencies
+2026-04-09 13:07:08,762 - test_framework - INFO - [test5] Test result saved: ./test_output/results/test5.json
+2026-04-09 13:07:08,762 - test_framework - INFO - Test Summary: {'total_tests': 6, 'passed': 3, 'failed': 3, 'success_rate': 50.0, 'avg_duration': 0.9676264127095541, 'total_duration': 5.805758476257324, 'timestamp': 1775740028.76239}
+2026-04-09 13:07:08,763 - test_framework - INFO - JSON report generated: ./test_reports/test_report_20260409_130708.json
+2026-04-09 13:07:08,763 - test_framework - INFO - HTML report generated: ./test_reports/test_report_20260409_130708.html
+2026-04-09 13:07:08,763 - test_framework - INFO - Test reports generated: {'json': './test_reports/test_report_20260409_130708.json', 'html': './test_reports/test_report_20260409_130708.html'}
+2026-04-09 13:07:08,763 - test_framework - INFO - Test reports generated:
+2026-04-09 13:07:08,763 - test_framework - INFO -   json: ./test_reports/test_report_20260409_130708.json
+2026-04-09 13:07:08,764 - test_framework - INFO -   html: ./test_reports/test_report_20260409_130708.html
+2026-04-09 13:07:08,764 - test_framework - INFO - 
+Running tests by tags: ['sample', 'basic']
+2026-04-09 13:07:08,764 - test_framework - INFO - Tagged Test Summary: {'total_tests': 0, 'passed': 0, 'failed': 0, 'success_rate': 0, 'avg_duration': 0, 'total_duration': 0, 'timestamp': 1775740028.764203}
+2026-04-09 13:07:08,764 - test_framework - INFO - Enhanced test framework demonstration completed
+2026-04-09 13:08:15,122 - test_framework - INFO - JSON report generated: ./test_reports_test/test_report.json
+2026-04-09 13:08:15,122 - test_framework - INFO - HTML report generated: ./test_reports_test/test_report.html
+2026-04-09 13:08:15,123 - test_framework - INFO - Test reports generated: {'json': './test_reports_test/test_report.json', 'html': './test_reports_test/test_report.html'}
+2026-04-09 13:08:15,123 - test_framework - INFO - Running test group: ['Test Case 1']
+2026-04-09 13:08:15,124 - test_framework - INFO - [test1] Starting test: Test Case 1
+2026-04-09 13:08:15,225 - test_framework - INFO - [test1] Test PASSED: Test Case 1 (duration: 0.10s)
+2026-04-09 13:08:15,226 - test_framework - INFO - [test1] Test result saved: ./test_output_test/results/test1.json
+2026-04-09 13:08:15,226 - test_framework - INFO - Running test group: ['Dependency Test']
+2026-04-09 13:08:15,227 - test_framework - INFO - [dep] Starting test: Dependency Test
+2026-04-09 13:08:15,327 - test_framework - INFO - [dep] Test PASSED: Dependency Test (duration: 0.10s)
+2026-04-09 13:08:15,328 - test_framework - INFO - [dep] Test result saved: ./test_output_test/results/dep.json
+2026-04-09 13:08:15,328 - test_framework - INFO - Running test group: ['Test with Dependency']
+2026-04-09 13:08:15,329 - test_framework - INFO - [test] Starting test: Test with Dependency
+2026-04-09 13:08:15,429 - test_framework - INFO - [test] Test PASSED: Test with Dependency (duration: 0.10s)
+2026-04-09 13:08:15,430 - test_framework - INFO - [test] Test result saved: ./test_output_test/results/test.json
+2026-04-09 13:08:15,431 - test_framework - INFO - Running test group: ['Failing Dependency']
+2026-04-09 13:08:15,431 - test_framework - INFO - [dep] Starting test: Failing Dependency
+2026-04-09 13:08:15,532 - test_framework - ERROR - [dep] Test failed: Failing Dependency - Unexpected error: Dependency failed
+2026-04-09 13:08:15,532 - test_framework - INFO - [dep] Test result saved: ./test_output_test/results/dep.json
+2026-04-09 13:08:15,532 - test_framework - WARNING - [test] Skipping test Test with Failing Dependency due to failed dependencies
+2026-04-09 13:08:15,533 - test_framework - INFO - [test] Test result saved: ./test_output_test/results/test.json
+2026-04-09 13:08:15,533 - test_framework - INFO - Running test group: ['Test 1', 'Test 2', 'Test 3']
+2026-04-09 13:08:15,534 - test_framework - INFO - [test1] Starting test: Test 1
+2026-04-09 13:08:15,534 - test_framework - INFO - [test2] Starting test: Test 2
+2026-04-09 13:08:15,534 - test_framework - INFO - [test3] Starting test: Test 3
+2026-04-09 13:08:15,735 - test_framework - INFO - [test1] Test PASSED: Test 1 (duration: 0.20s)
+2026-04-09 13:08:15,736 - test_framework - INFO - [test2] Test PASSED: Test 2 (duration: 0.20s)
+2026-04-09 13:08:15,736 - test_framework - INFO - [test1] Test result saved: ./test_output_test/results/test1.json
+2026-04-09 13:08:15,736 - test_framework - INFO - [test2] Test result saved: ./test_output_test/results/test2.json
+2026-04-09 13:08:15,737 - test_framework - INFO - [test3] Test PASSED: Test 3 (duration: 0.20s)
+2026-04-09 13:08:15,737 - test_framework - INFO - [test3] Test result saved: ./test_output_test/results/test3.json
+2026-04-09 13:08:15,738 - test_framework - INFO - Running test group: ['Long Running Test']
+2026-04-09 13:08:15,738 - test_framework - INFO - [test] Starting test: Long Running Test
+2026-04-09 13:08:15,839 - test_framework - ERROR - [test] Test failed: Long Running Test - Test timed out after 0.1 seconds
+2026-04-09 13:08:16,239 - test_framework - INFO - [test] Test result saved: ./test_output_test/results/test.json

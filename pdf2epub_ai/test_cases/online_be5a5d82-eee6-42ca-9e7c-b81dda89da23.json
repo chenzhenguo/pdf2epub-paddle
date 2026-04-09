@@ -1,0 +1,16 @@
+{
+  "test_id": "online_be5a5d82-eee6-42ca-9e7c-b81dda89da23",
+  "name": "Global Trends Report",
+  "description": "World Economic Forum global trends report",
+  "pdf_source": "https://www.weforum.org/reports/global-trends-report-2023",
+  "is_online": true,
+  "expected_title": "Global Trends Report",
+  "expected_author": null,
+  "tags": [
+    "online",
+    "report",
+    "business",
+    "structured"
+  ],
+  "created_at": 1775737758.7949743
+}

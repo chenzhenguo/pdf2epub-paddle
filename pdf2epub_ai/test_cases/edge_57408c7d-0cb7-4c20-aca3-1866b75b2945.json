@@ -1,0 +1,15 @@
+{
+  "test_id": "edge_57408c7d-0cb7-4c20-aca3-1866b75b2945",
+  "name": "Image-only PDF",
+  "description": "PDF containing only images, no text",
+  "pdf_source": "https://www.dropbox.com/s/9h8g7f6e5d4c3b2/image_only.pdf?dl=1",
+  "is_online": true,
+  "expected_title": "Image-only PDF",
+  "expected_author": null,
+  "tags": [
+    "online",
+    "edge",
+    "images"
+  ],
+  "created_at": 1775737758.7949743
+}

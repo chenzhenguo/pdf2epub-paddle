@@ -1,0 +1,159 @@
+{
+  "timestamp": 1775739872.190176,
+  "summary": {
+    "total_tests": 6,
+    "passed": 0,
+    "failed": 6,
+    "success_rate": 0.0,
+    "avg_duration": 0.0,
+    "total_duration": 0
+  },
+  "results": [
+    {
+      "test_id": "test1",
+      "test_name": "Sample Test 1",
+      "success": false,
+      "message": "Error running test test1: 'TestCase' object has no attribute 'test_name'",
+      "duration": 0,
+      "output": null,
+      "error": "Error running test test1: 'TestCase' object has no attribute 'test_name'",
+      "logs": [],
+      "timestamp": 1775739872.1872818,
+      "start_time": 1775739872.187283
+    },
+    {
+      "test_id": "test4",
+      "test_name": "Sample Test 4 (failing)",
+      "success": false,
+      "message": "Error running test test4: 'TestCase' object has no attribute 'test_name'",
+      "duration": 0,
+      "output": null,
+      "error": "Error running test test4: 'TestCase' object has no attribute 'test_name'",
+      "logs": [],
+      "timestamp": 1775739872.1876547,
+      "start_time": 1775739872.1876554
+    },
+    {
+      "test_id": "test2",
+      "test_name": "Sample Test 2",
+      "success": false,
+      "message": "Error running test test2: 'TestCase' object has no attribute 'test_name'",
+      "duration": 0,
+      "output": null,
+      "error": "Error running test test2: 'TestCase' object has no attribute 'test_name'",
+      "logs": [],
+      "timestamp": 1775739872.1879973,
+      "start_time": 1775739872.1879976
+    },
+    {
+      "test_id": "test6",
+      "test_name": "Sample Test 6 (timeout)",
+      "success": false,
+      "message": "Error running test test6: 'TestCase' object has no attribute 'test_name'",
+      "duration": 0,
+      "output": null,
+      "error": "Error running test test6: 'TestCase' object has no attribute 'test_name'",
+      "logs": [],
+      "timestamp": 1775739872.18831,
+      "start_time": 1775739872.1883104
+    },
+    {
+      "test_id": "test3",
+      "test_name": "Sample Test 3 (depends on test1)",
+      "success": false,
+      "message": "Error running test test3: 'TestCase' object has no attribute 'test_name'",
+      "duration": 0,
+      "output": null,
+      "error": "Error running test test3: 'TestCase' object has no attribute 'test_name'",
+      "logs": [],
+      "timestamp": 1775739872.1892679,
+      "start_time": 1775739872.189268
+    },
+    {
+      "test_id": "test5",
+      "test_name": "Sample Test 5 (depends on test4)",
+      "success": false,
+      "message": "Error running test test5: 'TestCase' object has no attribute 'test_name'",
+      "duration": 0,
+      "output": null,
+      "error": "Error running test test5: 'TestCase' object has no attribute 'test_name'",
+      "logs": [],
+      "timestamp": 1775739872.1896234,
+      "start_time": 1775739872.1896238
+    }
+  ],
+  "detailed_results": [
+    {
+      "test_id": "test1",
+      "test_name": "Sample Test 1",
+      "success": false,
+      "duration": 0,
+      "message": "Error running test test1: 'TestCase' object has no attribute 'test_name'",
+      "error": "Error running test test1: 'TestCase' object has no attribute 'test_name'",
+      "output": null,
+      "logs": [],
+      "start_time": 1775739872.187283,
+      "timestamp": 1775739872.1872818
+    },
+    {
+      "test_id": "test4",
+      "test_name": "Sample Test 4 (failing)",
+      "success": false,
+      "duration": 0,
+      "message": "Error running test test4: 'TestCase' object has no attribute 'test_name'",
+      "error": "Error running test test4: 'TestCase' object has no attribute 'test_name'",
+      "output": null,
+      "logs": [],
+      "start_time": 1775739872.1876554,
+      "timestamp": 1775739872.1876547
+    },
+    {
+      "test_id": "test2",
+      "test_name": "Sample Test 2",
+      "success": false,
+      "duration": 0,
+      "message": "Error running test test2: 'TestCase' object has no attribute 'test_name'",
+      "error": "Error running test test2: 'TestCase' object has no attribute 'test_name'",
+      "output": null,
+      "logs": [],
+      "start_time": 1775739872.1879976,
+      "timestamp": 1775739872.1879973
+    },
+    {
+      "test_id": "test6",
+      "test_name": "Sample Test 6 (timeout)",
+      "success": false,
+      "duration": 0,
+      "message": "Error running test test6: 'TestCase' object has no attribute 'test_name'",
+      "error": "Error running test test6: 'TestCase' object has no attribute 'test_name'",
+      "output": null,
+      "logs": [],
+      "start_time": 1775739872.1883104,
+      "timestamp": 1775739872.18831
+    },
+    {
+      "test_id": "test3",
+      "test_name": "Sample Test 3 (depends on test1)",
+      "success": false,
+      "duration": 0,
+      "message": "Error running test test3: 'TestCase' object has no attribute 'test_name'",
+      "error": "Error running test test3: 'TestCase' object has no attribute 'test_name'",
+      "output": null,
+      "logs": [],
+      "start_time": 1775739872.189268,
+      "timestamp": 1775739872.1892679
+    },
+    {
+      "test_id": "test5",
+      "test_name": "Sample Test 5 (depends on test4)",
+      "success": false,
+      "duration": 0,
+      "message": "Error running test test5: 'TestCase' object has no attribute 'test_name'",
+      "error": "Error running test test5: 'TestCase' object has no attribute 'test_name'",
+      "output": null,
+      "logs": [],
+      "start_time": 1775739872.1896238,
+      "timestamp": 1775739872.1896234
+    }
+  ]
+}

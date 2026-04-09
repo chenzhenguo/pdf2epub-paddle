@@ -1,0 +1,15 @@
+{
+  "test_id": "conversion_338de09c-f712-4447-972a-7708e61e70a6",
+  "name": "PDF with Footnotes",
+  "description": "PDF containing footnotes and endnotes",
+  "pdf_source": "https://www.dropbox.com/s/2p3q4r5s6t7u8v9/footnotes.pdf?dl=1",
+  "is_online": true,
+  "expected_title": "PDF with Footnotes",
+  "expected_author": null,
+  "tags": [
+    "online",
+    "conversion",
+    "footnotes"
+  ],
+  "created_at": 1775737758.7949743
+}

@@ -1,0 +1,175 @@
+{
+  "timestamp": 1775739955.850467,
+  "summary": {
+    "total_tests": 6,
+    "passed": 4,
+    "failed": 2,
+    "success_rate": 66.66666666666666,
+    "avg_duration": 1.017850120862325,
+    "total_duration": 6.10710072517395
+  },
+  "results": [
+    {
+      "test_id": "test4",
+      "test_name": "Sample Test 4 (failing)",
+      "success": false,
+      "message": "Unexpected error: Test 4 failed intentionally",
+      "duration": 0.8012843132019043,
+      "output": null,
+      "error": "Unexpected error: Test 4 failed intentionally",
+      "logs": [],
+      "timestamp": 1775739950.3461206,
+      "start_time": 1775739949.5448375
+    },
+    {
+      "test_id": "test1",
+      "test_name": "Sample Test 1",
+      "success": true,
+      "message": "Test passed successfully",
+      "duration": 1.0017266273498535,
+      "output": {
+        "result": "Test 1 passed"
+      },
+      "error": null,
+      "logs": [],
+      "timestamp": 1775739950.545696,
+      "start_time": 1775739949.54397
+    },
+    {
+      "test_id": "test2",
+      "test_name": "Sample Test 2",
+      "success": true,
+      "message": "Test passed successfully",
+      "duration": 1.5011396408081055,
+      "output": {
+        "result": "Test 2 passed"
+      },
+      "error": null,
+      "logs": [],
+      "timestamp": 1775739951.0454805,
+      "start_time": 1775739949.544341
+    },
+    {
+      "test_id": "test6",
+      "test_name": "Sample Test 6 (timeout)",
+      "success": false,
+      "message": "Test timed out after 2 seconds",
+      "duration": 2.0012218952178955,
+      "output": null,
+      "error": "Test timed out after 2 seconds",
+      "logs": [],
+      "timestamp": 1775739952.347413,
+      "start_time": 1775739950.3461914
+    },
+    {
+      "test_id": "test5",
+      "test_name": "Sample Test 5 (depends on test4)",
+      "success": true,
+      "message": "Test passed successfully",
+      "duration": 0.30062389373779297,
+      "output": {
+        "result": "Test 5 passed"
+      },
+      "error": null,
+      "logs": [],
+      "timestamp": 1775739955.649485,
+      "start_time": 1775739955.3488617
+    },
+    {
+      "test_id": "test3",
+      "test_name": "Sample Test 3 (depends on test1)",
+      "success": true,
+      "message": "Test passed successfully",
+      "duration": 0.5011043548583984,
+      "output": {
+        "result": "Test 3 passed"
+      },
+      "error": null,
+      "logs": [],
+      "timestamp": 1775739955.849622,
+      "start_time": 1775739955.348518
+    }
+  ],
+  "detailed_results": [
+    {
+      "test_id": "test4",
+      "test_name": "Sample Test 4 (failing)",
+      "success": false,
+      "duration": 0.8012843132019043,
+      "message": "Unexpected error: Test 4 failed intentionally",
+      "error": "Unexpected error: Test 4 failed intentionally",
+      "output": null,
+      "logs": [],
+      "start_time": 1775739949.5448375,
+      "timestamp": 1775739950.3461206
+    },
+    {
+      "test_id": "test1",
+      "test_name": "Sample Test 1",
+      "success": true,
+      "duration": 1.0017266273498535,
+      "message": "Test passed successfully",
+      "error": null,
+      "output": {
+        "result": "Test 1 passed"
+      },
+      "logs": [],
+      "start_time": 1775739949.54397,
+      "timestamp": 1775739950.545696
+    },
+    {
+      "test_id": "test2",
+      "test_name": "Sample Test 2",
+      "success": true,
+      "duration": 1.5011396408081055,
+      "message": "Test passed successfully",
+      "error": null,
+      "output": {
+        "result": "Test 2 passed"
+      },
+      "logs": [],
+      "start_time": 1775739949.544341,
+      "timestamp": 1775739951.0454805
+    },
+    {
+      "test_id": "test6",
+      "test_name": "Sample Test 6 (timeout)",
+      "success": false,
+      "duration": 2.0012218952178955,
+      "message": "Test timed out after 2 seconds",
+      "error": "Test timed out after 2 seconds",
+      "output": null,
+      "logs": [],
+      "start_time": 1775739950.3461914,
+      "timestamp": 1775739952.347413
+    },
+    {
+      "test_id": "test5",
+      "test_name": "Sample Test 5 (depends on test4)",
+      "success": true,
+      "duration": 0.30062389373779297,
+      "message": "Test passed successfully",
+      "error": null,
+      "output": {
+        "result": "Test 5 passed"
+      },
+      "logs": [],
+      "start_time": 1775739955.3488617,
+      "timestamp": 1775739955.649485
+    },
+    {
+      "test_id": "test3",
+      "test_name": "Sample Test 3 (depends on test1)",
+      "success": true,
+      "duration": 0.5011043548583984,
+      "message": "Test passed successfully",
+      "error": null,
+      "output": {
+        "result": "Test 3 passed"
+      },
+      "logs": [],
+      "start_time": 1775739955.348518,
+      "timestamp": 1775739955.849622
+    }
+  ]
+}

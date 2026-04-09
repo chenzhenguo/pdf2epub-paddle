@@ -1,0 +1,14 @@
+{
+  "test_id": "test1",
+  "test_name": "Sample Test 1",
+  "success": true,
+  "message": "Test passed successfully",
+  "duration": 1.001859426498413,
+  "output": {
+    "result": "Test 1 passed"
+  },
+  "error": null,
+  "logs": [],
+  "timestamp": 1775740023.4587438,
+  "start_time": 1775740022.456885
+}

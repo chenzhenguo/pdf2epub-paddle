@@ -1,0 +1,12 @@
+{
+  "test_id": "test6",
+  "test_name": "Sample Test 6 (timeout)",
+  "success": false,
+  "message": "Test timed out after 2 seconds",
+  "duration": 2.00111985206604,
+  "output": null,
+  "error": "Test timed out after 2 seconds",
+  "logs": [],
+  "timestamp": 1775740025.2596698,
+  "start_time": 1775740023.2585502
+}

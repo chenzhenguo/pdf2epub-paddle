@@ -1,0 +1,16 @@
+{
+  "test_id": "online_0ee1707f-33a5-4737-8720-63b7c36358e9",
+  "name": "COVID-19 Research Paper",
+  "description": "Scientific research on COVID-19",
+  "pdf_source": "https://www.nature.com/articles/s41586-020-2012-7.pdf",
+  "is_online": true,
+  "expected_title": "A pneumonia outbreak associated with a new coronavirus of probable bat origin",
+  "expected_author": null,
+  "tags": [
+    "online",
+    "article",
+    "scientific",
+    "technical"
+  ],
+  "created_at": 1775737758.7949743
+}

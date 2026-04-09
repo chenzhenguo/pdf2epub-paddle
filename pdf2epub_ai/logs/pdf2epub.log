@@ -338,3 +338,63 @@ Test Summary:
 2026-04-09 12:39:17,950 - pdf2epub - INFO - Failed: 0
 2026-04-09 12:39:17,950 - pdf2epub - INFO - Success rate: 100.00%
 2026-04-09 12:39:17,951 - pdf2epub - INFO - All tests passed!
+2026-04-09 12:50:22,559 - pdf2epub - INFO - Cache cleared successfully, removed 1 files
+2026-04-09 12:50:22,561 - pdf2epub - INFO - Downloading PDF from: https://example.com/error
+2026-04-09 12:50:22,561 - pdf2epub - ERROR - Unexpected error: HTTP Error
+2026-04-09 12:50:22,564 - pdf2epub - INFO - Downloading PDF from: https://example.com/not-pdf.html
+2026-04-09 12:50:22,565 - pdf2epub - WARNING - Response is not PDF: text/html
+2026-04-09 12:50:22,565 - pdf2epub - INFO - Downloading PDF from: https://example.com/test.pdf
+2026-04-09 12:50:22,566 - pdf2epub - INFO - PDF downloaded successfully: /tmp/tmpazr7c6ix/49b152ba8c11c3486a09950dcc4043bd.pdf
+2026-04-09 12:50:22,567 - pdf2epub - INFO - Processing cloud storage source: s3://bucket/path/to.pdf
+2026-04-09 12:50:22,568 - pdf2epub - WARNING - Cloud storage support is not yet implemented
+2026-04-09 12:50:22,568 - pdf2epub - INFO - Using local PDF file: /tmp/tmpwblbpr2f.pdf
+2026-04-09 12:50:22,569 - pdf2epub - INFO - Using local PDF file: /tmp/tmp8q6qsley.txt
+2026-04-09 12:50:22,569 - pdf2epub - WARNING - Local file is not a PDF: /tmp/tmp8q6qsley.txt
+2026-04-09 12:50:22,569 - pdf2epub - ERROR - Unknown source type: unknown://source
+2026-04-09 12:50:41,444 - pdf2epub - INFO - Cache cleared successfully, removed 1 files
+2026-04-09 12:50:41,446 - pdf2epub - INFO - Downloading PDF from: https://example.com/error
+2026-04-09 12:50:41,446 - pdf2epub - WARNING - Download failed (attempt 1/2), retrying in 1s: HTTP Error
+2026-04-09 12:50:42,446 - pdf2epub - WARNING - Download failed (attempt 2/2), retrying in 2s: HTTP Error
+2026-04-09 12:50:44,447 - pdf2epub - ERROR - Error downloading PDF after 2 retries: HTTP Error
+2026-04-09 12:50:44,448 - pdf2epub - INFO - Downloading PDF from: https://example.com/not-pdf.html
+2026-04-09 12:50:44,448 - pdf2epub - WARNING - Response is not PDF: text/html
+2026-04-09 12:50:44,449 - pdf2epub - INFO - Downloading PDF from: https://example.com/test.pdf
+2026-04-09 12:50:44,450 - pdf2epub - INFO - PDF downloaded successfully: /tmp/tmps9syq_z9/49b152ba8c11c3486a09950dcc4043bd.pdf
+2026-04-09 12:50:44,451 - pdf2epub - INFO - Processing cloud storage source: s3://bucket/path/to.pdf
+2026-04-09 12:50:44,451 - pdf2epub - WARNING - Cloud storage support is not yet implemented
+2026-04-09 12:50:44,452 - pdf2epub - INFO - Using local PDF file: /tmp/tmp22d51x6i.pdf
+2026-04-09 12:50:44,452 - pdf2epub - INFO - Using local PDF file: /tmp/tmp2qltkfrc.txt
+2026-04-09 12:50:44,452 - pdf2epub - WARNING - Local file is not a PDF: /tmp/tmp2qltkfrc.txt
+2026-04-09 12:50:44,453 - pdf2epub - ERROR - Unknown source type: unknown://source
+2026-04-09 12:58:12,531 - pdf2epub - INFO - Test case loaded: online_1574a40d-a76a-421a-aa14-0b3d76ef1169
+2026-04-09 12:58:12,531 - pdf2epub - INFO - Found 1 test cases
+2026-04-09 12:58:12,531 - pdf2epub - INFO - Test case deleted: online_1574a40d-a76a-421a-aa14-0b3d76ef1169
+2026-04-09 12:58:12,532 - pdf2epub - INFO - Test case saved: ./test_cases/online_663c4b26-8362-4f31-b848-c5e876082c68.json
+2026-04-09 12:58:12,532 - pdf2epub - INFO - Test case saved: Alice's Adventures in Wonderland
+2026-04-09 12:58:12,532 - pdf2epub - INFO - Test case saved: ./test_cases/online_d79e66f5-0131-4419-9704-f3db1ff33def.json
+2026-04-09 12:58:12,532 - pdf2epub - INFO - Test case saved: Attention Is All You Need
+2026-04-09 12:58:12,533 - pdf2epub - INFO - Test case saved: ./test_cases/online_be5a5d82-eee6-42ca-9e7c-b81dda89da23.json
+2026-04-09 12:58:12,533 - pdf2epub - INFO - Test case saved: Global Trends Report
+2026-04-09 12:58:12,533 - pdf2epub - INFO - Test case saved: ./test_cases/online_0ee1707f-33a5-4737-8720-63b7c36358e9.json
+2026-04-09 12:58:12,533 - pdf2epub - INFO - Test case saved: COVID-19 Research Paper
+2026-04-09 12:58:12,533 - pdf2epub - INFO - Test case saved: ./test_cases/online_083e3d8b-a13b-4a9d-9861-9f774db5159d.json
+2026-04-09 12:58:12,533 - pdf2epub - INFO - Test case saved: Python Documentation
+2026-04-09 12:58:12,534 - pdf2epub - INFO - Test case saved: ./test_cases/online_c3eb9d4a-304f-4967-bb8b-e4afb406a394.json
+2026-04-09 12:58:12,534 - pdf2epub - INFO - Test case saved: Sample Brochure
+2026-04-09 12:58:12,534 - pdf2epub - INFO - Test case saved: ./test_cases/edge_4dcc76f8-5c4f-4db6-8bce-d75c32ea90e9.json
+2026-04-09 12:58:12,534 - pdf2epub - INFO - Test case saved: Empty PDF
+2026-04-09 12:58:12,534 - pdf2epub - INFO - Test case saved: ./test_cases/edge_df3d9f85-57cc-4d9c-8983-e961c0976be7.json
+2026-04-09 12:58:12,535 - pdf2epub - INFO - Test case saved: Small PDF
+2026-04-09 12:58:12,535 - pdf2epub - INFO - Test case saved: ./test_cases/edge_57408c7d-0cb7-4c20-aca3-1866b75b2945.json
+2026-04-09 12:58:12,535 - pdf2epub - INFO - Test case saved: Image-only PDF
+2026-04-09 12:58:12,535 - pdf2epub - INFO - Test case saved: ./test_cases/edge_e214e17a-9119-497f-8871-63ebb6edb334.json
+2026-04-09 12:58:12,535 - pdf2epub - INFO - Test case saved: Complex Formatting PDF
+2026-04-09 12:58:12,535 - pdf2epub - INFO - Test case saved: ./test_cases/conversion_a9786a03-261a-4738-8e82-e0202a1be8ae.json
+2026-04-09 12:58:12,536 - pdf2epub - INFO - Test case saved: PDF with Tables
+2026-04-09 12:58:12,536 - pdf2epub - INFO - Test case saved: ./test_cases/conversion_338de09c-f712-4447-972a-7708e61e70a6.json
+2026-04-09 12:58:12,536 - pdf2epub - INFO - Test case saved: PDF with Footnotes
+2026-04-09 12:58:12,536 - pdf2epub - INFO - Test case saved: ./test_cases/conversion_bbc99318-84cb-4869-a0c1-e0dfe8e4781a.json
+2026-04-09 12:58:12,536 - pdf2epub - INFO - Test case saved: Multi-column PDF
+2026-04-09 12:58:12,537 - pdf2epub - INFO - Test case saved: ./test_cases/conversion_ffd63c55-1148-43cf-8531-9dd5e8ff74a0.json
+2026-04-09 12:58:12,537 - pdf2epub - INFO - Test case saved: Scanned PDF
+2026-04-09 12:58:12,537 - pdf2epub - INFO - Generated 14 test cases

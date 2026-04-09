@@ -1,0 +1,14 @@
+{
+  "test_id": "test5",
+  "test_name": "Sample Test 5 (depends on test4)",
+  "success": false,
+  "message": "Skipped due to failed dependencies",
+  "duration": 0,
+  "output": null,
+  "error": "Dependency failure",
+  "logs": [
+    "Skipped due to failed dependencies: ['test4']"
+  ],
+  "timestamp": 1775740028.7620063,
+  "start_time": 1775740028.7620068
+}
