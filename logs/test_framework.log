@@ -125,3 +125,39 @@ Running tests by tags: ['sample', 'basic']
 2026-04-09 13:08:15,738 - test_framework - INFO - [test] Starting test: Long Running Test
 2026-04-09 13:08:15,839 - test_framework - ERROR - [test] Test failed: Long Running Test - Test timed out after 0.1 seconds
 2026-04-09 13:08:16,239 - test_framework - INFO - [test] Test result saved: ./test_output_test/results/test.json
+2026-04-09 13:25:27,286 - test_framework - INFO - JSON report generated: ./test_reports_test/test_report.json
+2026-04-09 13:25:27,287 - test_framework - INFO - HTML report generated: ./test_reports_test/test_report.html
+2026-04-09 13:25:27,287 - test_framework - INFO - CSV report generated: ./test_reports_test/test_report.csv
+2026-04-09 13:25:27,288 - test_framework - INFO - Test reports generated: {'json': './test_reports_test/test_report.json', 'html': './test_reports_test/test_report.html', 'csv': './test_reports_test/test_report.csv'}
+2026-04-09 13:25:27,298 - test_framework - INFO - Running test group: ['Test Case 1']
+2026-04-09 13:25:27,299 - test_framework - INFO - [test1] Starting test: Test Case 1
+2026-04-09 13:25:27,400 - test_framework - INFO - [test1] Test PASSED: Test Case 1 (duration: 0.10s)
+2026-04-09 13:25:27,401 - test_framework - INFO - [test1] Test result saved: ./test_output_test/results/test1.json
+2026-04-09 13:25:27,403 - test_framework - INFO - Running test group: ['Dependency Test']
+2026-04-09 13:25:27,403 - test_framework - INFO - [dep] Starting test: Dependency Test
+2026-04-09 13:25:27,504 - test_framework - INFO - [dep] Test PASSED: Dependency Test (duration: 0.10s)
+2026-04-09 13:25:27,504 - test_framework - INFO - [dep] Test result saved: ./test_output_test/results/dep.json
+2026-04-09 13:25:27,505 - test_framework - INFO - Running test group: ['Test with Dependency']
+2026-04-09 13:25:27,505 - test_framework - INFO - [test] Starting test: Test with Dependency
+2026-04-09 13:25:27,606 - test_framework - INFO - [test] Test PASSED: Test with Dependency (duration: 0.10s)
+2026-04-09 13:25:27,606 - test_framework - INFO - [test] Test result saved: ./test_output_test/results/test.json
+2026-04-09 13:25:27,608 - test_framework - INFO - Running test group: ['Failing Dependency']
+2026-04-09 13:25:27,609 - test_framework - INFO - [dep] Starting test: Failing Dependency
+2026-04-09 13:25:27,709 - test_framework - ERROR - [dep] Test failed: Failing Dependency - Unexpected error: Dependency failed
+2026-04-09 13:25:27,710 - test_framework - INFO - [dep] Test result saved: ./test_output_test/results/dep.json
+2026-04-09 13:25:27,710 - test_framework - WARNING - [test] Skipping test Test with Failing Dependency due to failed dependencies
+2026-04-09 13:25:27,710 - test_framework - INFO - [test] Test result saved: ./test_output_test/results/test.json
+2026-04-09 13:25:27,712 - test_framework - INFO - Running test group: ['Test 1', 'Test 2', 'Test 3']
+2026-04-09 13:25:27,713 - test_framework - INFO - [test1] Starting test: Test 1
+2026-04-09 13:25:27,713 - test_framework - INFO - [test2] Starting test: Test 2
+2026-04-09 13:25:27,714 - test_framework - INFO - [test3] Starting test: Test 3
+2026-04-09 13:25:27,914 - test_framework - INFO - [test1] Test PASSED: Test 1 (duration: 0.20s)
+2026-04-09 13:25:27,915 - test_framework - INFO - [test1] Test result saved: ./test_output_test/results/test1.json
+2026-04-09 13:25:27,915 - test_framework - INFO - [test3] Test PASSED: Test 3 (duration: 0.20s)
+2026-04-09 13:25:27,915 - test_framework - INFO - [test2] Test PASSED: Test 2 (duration: 0.20s)
+2026-04-09 13:25:27,916 - test_framework - INFO - [test3] Test result saved: ./test_output_test/results/test3.json
+2026-04-09 13:25:27,916 - test_framework - INFO - [test2] Test result saved: ./test_output_test/results/test2.json
+2026-04-09 13:25:27,918 - test_framework - INFO - Running test group: ['Long Running Test']
+2026-04-09 13:25:27,919 - test_framework - INFO - [test] Starting test: Long Running Test
+2026-04-09 13:25:28,019 - test_framework - ERROR - [test] Test failed: Long Running Test - Test timed out after 0.1 seconds
+2026-04-09 13:25:28,420 - test_framework - INFO - [test] Test result saved: ./test_output_test/results/test.json
