@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pdf2epub_paddle.py
+pyproject.toml
+pdf2epub_paddle.egg-info/PKG-INFO
+pdf2epub_paddle.egg-info/SOURCES.txt
+pdf2epub_paddle.egg-info/dependency_links.txt
+pdf2epub_paddle.egg-info/requires.txt
+pdf2epub_paddle.egg-info/top_level.txt
+tests/test_pdf_download.py

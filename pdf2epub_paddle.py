@@ -44,6 +44,59 @@ def check_dependencies():
     return True
 
 
+def validate_pdf(pdf_path: str) -> Dict[str, Any]:
+    """
+    Validates PDF document integrity and extracts metadata.
+    
+    Args:
+        pdf_path (str): Path to the PDF file
+        
+    Returns:
+        Dict[str, Any]: Dictionary containing validation status and metadata
+    """
+    try:
+        # Open the PDF file
+        doc = fitz.open(pdf_path)
+        
+        # Basic validation: check if PDF is openable and has pages
+        if doc.is_closed:
+            return {
+                "valid": False,
+                "error": "Failed to open PDF file"
+            }
+        
+        # Extract metadata
+        metadata = doc.metadata
+        
+        # Get page count
+        page_count = len(doc)
+        
+        # Build validation result
+        result = {
+            "valid": True,
+            "metadata": {
+                "title": metadata.get("title", ""),
+                "author": metadata.get("author", ""),
+                "subject": metadata.get("subject", ""),
+                "keywords": metadata.get("keywords", ""),
+                "creator": metadata.get("creator", ""),
+                "producer": metadata.get("producer", ""),
+                "creation_date": metadata.get("creationDate", ""),
+                "mod_date": metadata.get("modDate", ""),
+                "page_count": page_count
+            }
+        }
+        
+        doc.close()
+        return result
+        
+    except Exception as e:
+        return {
+            "valid": False,
+            "error": str(e)
+        }
+
+
 def split_pdf(file_path: str, chunk_size: int = CHUNK_SIZE) -> List[str]:
     """
     Splits a PDF into chunks of `chunk_size` pages.
@@ -348,6 +401,77 @@ def download_image(url: str, save_path: str):
             return True
     except Exception as e:
         print(f"[!] Failed to download image {url}: {e}")
+    return False
+
+
+def download_pdf(url: str, save_path: str, timeout: int = 30):
+    """
+    Downloads a PDF document from a URL to a local path with progress tracking and file type validation.
+    
+    Args:
+        url (str): The URL of the PDF document to download.
+        save_path (str): The local path where the PDF should be saved.
+        timeout (int): The timeout for the HTTP request in seconds.
+        
+    Returns:
+        bool: True if the download was successful and the file is a valid PDF, False otherwise.
+    """
+    try:
+        print(f"[*] Downloading PDF from: {url}")
+        print(f"[*] Saving to: {save_path}")
+        
+        # Check file extension from URL
+        url_lower = url.lower()
+        if not url_lower.endswith('.pdf'):
+            print(f"[!] Warning: URL does not end with .pdf extension: {url}")
+        
+        # Send HTTP request with stream=True to enable progress tracking
+        response = requests.get(url, stream=True, timeout=timeout)
+        response.raise_for_status()  # Raise exception for HTTP errors
+        
+        # Check Content-Type header
+        content_type = response.headers.get('content-type', '').lower()
+        if not content_type.startswith('application/pdf'):
+            print(f"[!] Warning: Content-Type is not application/pdf: {content_type}")
+        
+        # Get total file size from headers
+        total_size = int(response.headers.get('content-length', 0))
+        downloaded_size = 0
+        chunk_size = 8192  # 8KB chunks
+        
+        # Ensure directory exists
+        os.makedirs(os.path.dirname(save_path), exist_ok=True)
+        
+        # Write content to file with progress tracking
+        with open(save_path, "wb") as f:
+            for chunk in response.iter_content(chunk_size=chunk_size):
+                if chunk:
+                    f.write(chunk)
+                    downloaded_size += len(chunk)
+                    
+                    # Calculate and display progress
+                    if total_size > 0:
+                        progress = (downloaded_size / total_size) * 100
+                        print(f"[*] Download progress: {progress:.2f}% ({downloaded_size}/{total_size} bytes)", end="\r")
+        
+        if total_size > 0:
+            print()  # New line after progress bar
+        
+        # Validate PDF file by checking magic number
+        with open(save_path, "rb") as f:
+            magic_number = f.read(4)
+            if magic_number != b'%PDF-':
+                print(f"[!] Error: File is not a valid PDF document (invalid magic number)")
+                os.remove(save_path)
+                return False
+        
+        print(f"[*] PDF download completed successfully")
+        return True
+        
+    except requests.exceptions.RequestException as e:
+        print(f"[!] Failed to download PDF: {e}")
+    except Exception as e:
+        print(f"[!] Unexpected error during PDF download: {e}")
     return False
 
 
@@ -707,6 +831,21 @@ def main():
         print("[!] Error: PADDLE_API_TOKEN environment variable is not set.")
         print("    Please set it using: export PADDLE_API_TOKEN='your_token_here'")
         return
+
+    # Validate PDF document
+    print("[-] Validating PDF document...")
+    validation_result = validate_pdf(input_path)
+    if not validation_result["valid"]:
+        print(f"[!] PDF validation failed: {validation_result['error']}")
+        return
+    
+    # Print metadata
+    print("[*] PDF metadata:")
+    metadata = validation_result["metadata"]
+    for key, value in metadata.items():
+        if value:
+            print(f"    {key}: {value}")
+    print(f"    page_count: {metadata['page_count']}")
 
     if not args.output:
         args.output = os.path.splitext(input_path)[0] + ".epub"
