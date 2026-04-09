@@ -7,7 +7,10 @@ import fitz  # PyMuPDF
 from ebooklib import epub
 from typing import List, Dict, Any
 
-from app.config import CHUNK_SIZE, MAX_DAILY_PAGES
+from app.config import CHUNK_SIZE, MAX_DAILY_PAGES, LLM_ENABLED, LLM_API_KEY, LLM_MODEL
+
+if LLM_ENABLED:
+    from app.utils.llm_processor import LLMProcessor
 
 
 def extract_pdf_content(file_path: str) -> tuple:
@@ -171,14 +174,31 @@ def process_pdf(
         
         # Step 3: Detect book structure
         print("[-] Step 3: Detecting book structure...")
-        structure = detect_book_structure(paragraphs)
+        if LLM_ENABLED:
+            print("    Using LLM for structure detection...")
+            llm_processor = LLMProcessor(LLM_API_KEY, LLM_MODEL)
+            structure = llm_processor.detect_book_structure(paragraphs)
+        else:
+            structure = detect_book_structure(paragraphs)
+        
+        # Override title and author if provided
+        if title:
+            structure["title"] = title
+        if author:
+            structure["author"] = author
+        
         sections = map_sections_to_content(paragraphs, structure)
         
         # Step 4: Format paragraphs
         print("[-] Step 4: Formatting content...")
         formatted_chapters = []
         for section_title, section_content in sections:
-            formatted_content = [format_paragraph(p) for p in section_content]
+            if LLM_ENABLED and len(section_content) > 0:
+                print(f"    Using LLM to format {section_title}...")
+                llm_processor = LLMProcessor(LLM_API_KEY, LLM_MODEL)
+                formatted_content = llm_processor.format_paragraphs(section_content)
+            else:
+                formatted_content = [format_paragraph(p) for p in section_content]
             formatted_chapters.append((section_title, formatted_content))
         
         # Step 5: Generate EPUB

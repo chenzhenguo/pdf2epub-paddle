@@ -31,6 +31,7 @@ async def convert(
     request: Request,
     file: UploadFile = File(...),
     api_token: str = Form(...),
+    llm_api_key: str = Form(None),
     title: str = Form(None),
     author: str = Form(None),
     auto_toc: bool = Form(False),
@@ -50,6 +51,17 @@ async def convert(
             temp_dir,
             file.filename.replace(".pdf", ".epub")
         )
+
+        # Set LLM API key if provided
+        if llm_api_key:
+            import os
+            os.environ["LLM_API_KEY"] = llm_api_key
+        
+        # Reload config to pick up the new LLM API key
+        from importlib import reload
+        import app.config
+        reload(app.config)
+        from app.config import LLM_ENABLED, LLM_API_KEY
 
         # Call processing function
         success, message = process_pdf(

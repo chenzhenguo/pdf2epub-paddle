@@ -16,6 +16,11 @@ os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 API_URL = "https://s9a8lfu1jd2efbl7.aistudio-app.com/layout-parsing"
 API_TOKEN = os.getenv("PADDLE_API_TOKEN", "")
 
+# LLM Configuration
+LLM_API_KEY = os.getenv("LLM_API_KEY", "")
+LLM_MODEL = os.getenv("LLM_MODEL", "gpt-4o")
+LLM_ENABLED = bool(LLM_API_KEY)
+
 # Processing Configuration
 CHUNK_SIZE = 5  # Reduced to 5 for maximum reliability
 MAX_DAILY_PAGES = 3000
