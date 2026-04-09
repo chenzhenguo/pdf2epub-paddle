@@ -1,0 +1,340 @@
+2026-04-09 12:36:06,711 - pdf2epub - INFO - Starting PDF to EPUB test suite
+2026-04-09 12:36:06,711 - pdf2epub - INFO - Step 1: Generating test cases...
+2026-04-09 12:36:06,712 - pdf2epub - INFO - Test case saved: ./test_cases/online_da5aa6cf-26e5-403e-bb92-a049a29c1fe8.json
+2026-04-09 12:36:06,712 - pdf2epub - INFO - Test case saved: Sample PDF Document
+2026-04-09 12:36:06,712 - pdf2epub - INFO - Test case saved: ./test_cases/online_f9661b79-d130-441f-af5c-31fcc7bb79f1.json
+2026-04-09 12:36:06,712 - pdf2epub - INFO - Test case saved: PDF Reference
+2026-04-09 12:36:06,713 - pdf2epub - INFO - Test case saved: ./test_cases/online_5e7d2f09-c51d-4f88-931b-fcf20cf009f3.json
+2026-04-09 12:36:06,713 - pdf2epub - INFO - Test case saved: Privacy Policy Sample
+2026-04-09 12:36:06,713 - pdf2epub - INFO - Test case saved: ./test_cases/local_dc53b783-5ee2-4fda-8d13-23a9afe30698.json
+2026-04-09 12:36:06,713 - pdf2epub - INFO - Test case saved: Local Book PDF
+2026-04-09 12:36:06,713 - pdf2epub - INFO - Test case saved: ./test_cases/local_2bf84c2f-3f4e-4347-a015-d06307471597.json
+2026-04-09 12:36:06,713 - pdf2epub - INFO - Test case saved: Local Article PDF
+2026-04-09 12:36:06,714 - pdf2epub - INFO - Test case saved: ./test_cases/local_3dbe0adb-e442-4907-a79e-7b57b0d55f4d.json
+2026-04-09 12:36:06,714 - pdf2epub - INFO - Test case saved: Local Report PDF
+2026-04-09 12:36:06,714 - pdf2epub - INFO - Test case saved: ./test_cases/edge_2d3bf359-08d6-45e3-b737-c5165e8aa760.json
+2026-04-09 12:36:06,714 - pdf2epub - INFO - Test case saved: Empty PDF
+2026-04-09 12:36:06,714 - pdf2epub - INFO - Test case saved: ./test_cases/edge_b6a68c9c-b63b-4a20-9706-dd798f82dfc7.json
+2026-04-09 12:36:06,715 - pdf2epub - INFO - Test case saved: Very Small PDF
+2026-04-09 12:36:06,715 - pdf2epub - INFO - Test case saved: ./test_cases/edge_82550ac8-2687-46d7-bfa8-e758efd56cbe.json
+2026-04-09 12:36:06,715 - pdf2epub - INFO - Test case saved: PDF with Images
+2026-04-09 12:36:06,715 - pdf2epub - INFO - Generated 9 test cases
+2026-04-09 12:36:06,715 - pdf2epub - INFO - Generated 9 test cases
+2026-04-09 12:36:06,715 - pdf2epub - INFO - Step 2: Running test cases...
+2026-04-09 12:36:06,716 - pdf2epub - INFO - Test case loaded: local_2bf84c2f-3f4e-4347-a015-d06307471597
+2026-04-09 12:36:06,716 - pdf2epub - INFO - Test case loaded: edge_82550ac8-2687-46d7-bfa8-e758efd56cbe
+2026-04-09 12:36:06,716 - pdf2epub - INFO - Test case loaded: online_f9661b79-d130-441f-af5c-31fcc7bb79f1
+2026-04-09 12:36:06,716 - pdf2epub - INFO - Test case loaded: edge_b6a68c9c-b63b-4a20-9706-dd798f82dfc7
+2026-04-09 12:36:06,717 - pdf2epub - INFO - Test case loaded: local_dc53b783-5ee2-4fda-8d13-23a9afe30698
+2026-04-09 12:36:06,717 - pdf2epub - INFO - Test case loaded: online_da5aa6cf-26e5-403e-bb92-a049a29c1fe8
+2026-04-09 12:36:06,717 - pdf2epub - INFO - Test case loaded: edge_2d3bf359-08d6-45e3-b737-c5165e8aa760
+2026-04-09 12:36:06,717 - pdf2epub - INFO - Test case loaded: online_5e7d2f09-c51d-4f88-931b-fcf20cf009f3
+2026-04-09 12:36:06,717 - pdf2epub - INFO - Test case loaded: local_3dbe0adb-e442-4907-a79e-7b57b0d55f4d
+2026-04-09 12:36:06,718 - pdf2epub - INFO - Found 9 test cases
+2026-04-09 12:36:06,718 - pdf2epub - INFO - Running test case: Local Article PDF
+2026-04-09 12:36:06,718 - pdf2epub - ERROR - Local PDF file not found: ./test_files/article.pdf
+2026-04-09 12:36:06,718 - pdf2epub - INFO - Test result saved: ./test_output/results/local_2bf84c2f-3f4e-4347-a015-d06307471597.json
+2026-04-09 12:36:06,718 - pdf2epub - INFO - Running test case: PDF with Images
+2026-04-09 12:36:06,718 - pdf2epub - ERROR - Local PDF file not found: ./test_files/images.pdf
+2026-04-09 12:36:06,719 - pdf2epub - INFO - Test result saved: ./test_output/results/edge_82550ac8-2687-46d7-bfa8-e758efd56cbe.json
+2026-04-09 12:36:06,719 - pdf2epub - INFO - Running test case: PDF Reference
+2026-04-09 12:36:06,719 - pdf2epub - INFO - Downloading online PDF: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf
+2026-04-09 12:36:06,719 - pdf2epub - INFO - Downloading PDF from: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf
+2026-04-09 12:36:06,972 - pdf2epub - ERROR - Error downloading PDF: 404 Client Error: Not Found for url: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf
+2026-04-09 12:36:06,973 - pdf2epub - ERROR - Failed to download PDF from https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf
+2026-04-09 12:36:06,974 - pdf2epub - INFO - Test result saved: ./test_output/results/online_f9661b79-d130-441f-af5c-31fcc7bb79f1.json
+2026-04-09 12:36:06,974 - pdf2epub - INFO - Running test case: Very Small PDF
+2026-04-09 12:36:06,974 - pdf2epub - ERROR - Local PDF file not found: ./test_files/small.pdf
+2026-04-09 12:36:06,974 - pdf2epub - INFO - Test result saved: ./test_output/results/edge_b6a68c9c-b63b-4a20-9706-dd798f82dfc7.json
+2026-04-09 12:36:06,975 - pdf2epub - INFO - Running test case: Local Book PDF
+2026-04-09 12:36:06,975 - pdf2epub - ERROR - Local PDF file not found: ./test_files/book.pdf
+2026-04-09 12:36:06,975 - pdf2epub - INFO - Test result saved: ./test_output/results/local_dc53b783-5ee2-4fda-8d13-23a9afe30698.json
+2026-04-09 12:36:06,975 - pdf2epub - INFO - Running test case: Sample PDF Document
+2026-04-09 12:36:06,975 - pdf2epub - INFO - Downloading online PDF: https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf
+2026-04-09 12:36:06,975 - pdf2epub - INFO - Downloading PDF from: https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf
+2026-04-09 12:36:07,252 - pdf2epub - INFO - PDF downloaded successfully: ./download_cache/2b161ce49eab8ac9a3bff3d2f0c09c99.pdf
+2026-04-09 12:36:07,254 - pdf2epub - INFO - Processing PDF: ./download_cache/2b161ce49eab8ac9a3bff3d2f0c09c99.pdf
+2026-04-09 12:36:07,254 - pdf2epub - INFO - Starting PDF processing: ./download_cache/2b161ce49eab8ac9a3bff3d2f0c09c99.pdf
+2026-04-09 12:36:07,254 - pdf2epub - INFO - Step 1: Extracting PDF content...
+2026-04-09 12:36:07,277 - pdf2epub - INFO - Extracted 125 text chunks and 5 images
+2026-04-09 12:36:07,278 - pdf2epub - INFO - Step 2: Processing text...
+2026-04-09 12:36:07,278 - pdf2epub - INFO - Processed 24 paragraphs
+2026-04-09 12:36:07,278 - pdf2epub - INFO - Step 3: Detecting book structure...
+2026-04-09 12:36:07,278 - pdf2epub - INFO - Using heuristic structure detection...
+2026-04-09 12:36:07,279 - pdf2epub - INFO - Detected structure: title='PDF Bookmark Sample Page 1 of 4 PDF BOOKMARK SAMPLE Sample Date: May 2001 Prepared by: Accelio Present Applied Technology Created and Tested Using: • Accelio Present Central 5.4 • Accelio Present Output Designer 5.4 Features Demonstrated: • Primary bookmarks in a PDF file.', author='None', chapters=0
+2026-04-09 12:36:07,279 - pdf2epub - INFO - Step 4: Formatting content...
+2026-04-09 12:36:07,279 - pdf2epub - INFO - Formatted 2 chapters
+2026-04-09 12:36:07,279 - pdf2epub - INFO - Step 5: Generating EPUB...
+2026-04-09 12:36:07,303 - pdf2epub - INFO - EPUB generated successfully: ./test_output/epub/online_da5aa6cf-26e5-403e-bb92-a049a29c1fe8.epub
+2026-04-09 12:36:07,304 - pdf2epub - INFO - Test passed: Sample PDF Document
+2026-04-09 12:36:07,304 - pdf2epub - INFO - Test result saved: ./test_output/results/online_da5aa6cf-26e5-403e-bb92-a049a29c1fe8.json
+2026-04-09 12:36:07,304 - pdf2epub - INFO - Running test case: Empty PDF
+2026-04-09 12:36:07,304 - pdf2epub - ERROR - Local PDF file not found: ./test_files/empty.pdf
+2026-04-09 12:36:07,304 - pdf2epub - INFO - Test result saved: ./test_output/results/edge_2d3bf359-08d6-45e3-b737-c5165e8aa760.json
+2026-04-09 12:36:07,305 - pdf2epub - INFO - Running test case: Privacy Policy Sample
+2026-04-09 12:36:07,305 - pdf2epub - INFO - Downloading online PDF: https://www.example.com/privacy-policy.pdf
+2026-04-09 12:36:07,305 - pdf2epub - INFO - Downloading PDF from: https://www.example.com/privacy-policy.pdf
+2026-04-09 12:36:07,697 - pdf2epub - ERROR - Error downloading PDF: HTTPSConnectionPool(host='www.example.com', port=443): Max retries exceeded with url: /privacy-policy.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))
+2026-04-09 12:36:07,698 - pdf2epub - ERROR - Failed to download PDF from https://www.example.com/privacy-policy.pdf
+2026-04-09 12:36:07,698 - pdf2epub - INFO - Test result saved: ./test_output/results/online_5e7d2f09-c51d-4f88-931b-fcf20cf009f3.json
+2026-04-09 12:36:07,698 - pdf2epub - INFO - Running test case: Local Report PDF
+2026-04-09 12:36:07,698 - pdf2epub - ERROR - Local PDF file not found: ./test_files/report.pdf
+2026-04-09 12:36:07,699 - pdf2epub - INFO - Test result saved: ./test_output/results/local_3dbe0adb-e442-4907-a79e-7b57b0d55f4d.json
+2026-04-09 12:36:07,699 - pdf2epub - INFO - Completed 9 tests
+2026-04-09 12:36:07,699 - pdf2epub - INFO - Step 3: Generating test reports...
+2026-04-09 12:36:07,701 - pdf2epub - INFO - EPUB validation completed: ./test_output/epub/online_da5aa6cf-26e5-403e-bb92-a049a29c1fe8.epub
+2026-04-09 12:36:07,701 - pdf2epub - INFO - Valid: True, Errors: 0, Warnings: 0
+2026-04-09 12:36:07,701 - pdf2epub - INFO - JSON report generated: ./test_reports/test_report_20260409_123607.json
+2026-04-09 12:36:07,702 - pdf2epub - ERROR - Error generating HTML report: name 'total_tests' is not defined
+2026-04-09 12:36:07,702 - pdf2epub - INFO - Test reports generated: {'json': './test_reports/test_report_20260409_123607.json', 'html': './test_reports/test_report_20260409_123607.html'}
+2026-04-09 12:36:07,702 - pdf2epub - INFO - Step 4: Test suite completed
+2026-04-09 12:36:07,702 - pdf2epub - INFO - Test reports generated:
+2026-04-09 12:36:07,702 - pdf2epub - INFO -   json: ./test_reports/test_report_20260409_123607.json
+2026-04-09 12:36:07,702 - pdf2epub - INFO -   html: ./test_reports/test_report_20260409_123607.html
+2026-04-09 12:36:07,702 - pdf2epub - INFO - 
+Test Summary:
+2026-04-09 12:36:07,702 - pdf2epub - INFO - Total tests: 9
+2026-04-09 12:36:07,702 - pdf2epub - INFO - Passed: 1
+2026-04-09 12:36:07,702 - pdf2epub - INFO - Failed: 8
+2026-04-09 12:36:07,703 - pdf2epub - INFO - Success rate: 11.11%
+2026-04-09 12:36:07,703 - pdf2epub - ERROR - 8 test(s) failed
+2026-04-09 12:37:37,161 - pdf2epub - INFO - Starting PDF to EPUB test suite
+2026-04-09 12:37:37,161 - pdf2epub - INFO - Step 1: Generating test cases...
+2026-04-09 12:37:37,161 - pdf2epub - INFO - Test case saved: ./test_cases/online_9f758548-a90c-420e-a8d5-2f6310633915.json
+2026-04-09 12:37:37,161 - pdf2epub - INFO - Test case saved: Sample PDF Document
+2026-04-09 12:37:37,162 - pdf2epub - INFO - Test case saved: ./test_cases/online_4548845f-c1b0-4ecc-8f6c-8cdaafe21108.json
+2026-04-09 12:37:37,162 - pdf2epub - INFO - Test case saved: PDF Reference
+2026-04-09 12:37:37,162 - pdf2epub - INFO - Test case saved: ./test_cases/online_709ba353-8658-4f19-84f1-ab0c9e877ea8.json
+2026-04-09 12:37:37,162 - pdf2epub - INFO - Test case saved: Privacy Policy Sample
+2026-04-09 12:37:37,162 - pdf2epub - INFO - Test case saved: ./test_cases/local_dc1cdf72-43d7-485f-b453-089605264cbb.json
+2026-04-09 12:37:37,163 - pdf2epub - INFO - Test case saved: Local Book PDF
+2026-04-09 12:37:37,163 - pdf2epub - INFO - Test case saved: ./test_cases/local_acc72d6b-4f47-41b2-9fcd-9e32573f4c7b.json
+2026-04-09 12:37:37,163 - pdf2epub - INFO - Test case saved: Local Article PDF
+2026-04-09 12:37:37,163 - pdf2epub - INFO - Test case saved: ./test_cases/local_a1e339cb-2125-4ee0-828a-0e67b3268358.json
+2026-04-09 12:37:37,163 - pdf2epub - INFO - Test case saved: Local Report PDF
+2026-04-09 12:37:37,163 - pdf2epub - INFO - Test case saved: ./test_cases/edge_9ca95b97-a025-4734-88c9-8e1ed48ed041.json
+2026-04-09 12:37:37,164 - pdf2epub - INFO - Test case saved: Empty PDF
+2026-04-09 12:37:37,164 - pdf2epub - INFO - Test case saved: ./test_cases/edge_b51ed7d3-440a-48ca-8354-d31604ddabae.json
+2026-04-09 12:37:37,164 - pdf2epub - INFO - Test case saved: Very Small PDF
+2026-04-09 12:37:37,164 - pdf2epub - INFO - Test case saved: ./test_cases/edge_f0267715-fcdd-4ecf-9d18-fb868bc5eb04.json
+2026-04-09 12:37:37,164 - pdf2epub - INFO - Test case saved: PDF with Images
+2026-04-09 12:37:37,164 - pdf2epub - INFO - Generated 9 test cases
+2026-04-09 12:37:37,164 - pdf2epub - INFO - Generated 9 test cases
+2026-04-09 12:37:37,164 - pdf2epub - INFO - Step 2: Running test cases...
+2026-04-09 12:37:37,165 - pdf2epub - INFO - Test case loaded: local_2bf84c2f-3f4e-4347-a015-d06307471597
+2026-04-09 12:37:37,165 - pdf2epub - INFO - Test case loaded: edge_b51ed7d3-440a-48ca-8354-d31604ddabae
+2026-04-09 12:37:37,165 - pdf2epub - INFO - Test case loaded: edge_82550ac8-2687-46d7-bfa8-e758efd56cbe
+2026-04-09 12:37:37,166 - pdf2epub - INFO - Test case loaded: online_709ba353-8658-4f19-84f1-ab0c9e877ea8
+2026-04-09 12:37:37,166 - pdf2epub - INFO - Test case loaded: edge_9ca95b97-a025-4734-88c9-8e1ed48ed041
+2026-04-09 12:37:37,166 - pdf2epub - INFO - Test case loaded: online_f9661b79-d130-441f-af5c-31fcc7bb79f1
+2026-04-09 12:37:37,166 - pdf2epub - INFO - Test case loaded: local_dc1cdf72-43d7-485f-b453-089605264cbb
+2026-04-09 12:37:37,166 - pdf2epub - INFO - Test case loaded: edge_b6a68c9c-b63b-4a20-9706-dd798f82dfc7
+2026-04-09 12:37:37,166 - pdf2epub - INFO - Test case loaded: local_dc53b783-5ee2-4fda-8d13-23a9afe30698
+2026-04-09 12:37:37,167 - pdf2epub - INFO - Test case loaded: online_da5aa6cf-26e5-403e-bb92-a049a29c1fe8
+2026-04-09 12:37:37,167 - pdf2epub - INFO - Test case loaded: local_acc72d6b-4f47-41b2-9fcd-9e32573f4c7b
+2026-04-09 12:37:37,167 - pdf2epub - INFO - Test case loaded: local_a1e339cb-2125-4ee0-828a-0e67b3268358
+2026-04-09 12:37:37,167 - pdf2epub - INFO - Test case loaded: edge_2d3bf359-08d6-45e3-b737-c5165e8aa760
+2026-04-09 12:37:37,167 - pdf2epub - INFO - Test case loaded: edge_f0267715-fcdd-4ecf-9d18-fb868bc5eb04
+2026-04-09 12:37:37,168 - pdf2epub - INFO - Test case loaded: online_5e7d2f09-c51d-4f88-931b-fcf20cf009f3
+2026-04-09 12:37:37,168 - pdf2epub - INFO - Test case loaded: online_9f758548-a90c-420e-a8d5-2f6310633915
+2026-04-09 12:37:37,168 - pdf2epub - INFO - Test case loaded: local_3dbe0adb-e442-4907-a79e-7b57b0d55f4d
+2026-04-09 12:37:37,168 - pdf2epub - INFO - Test case loaded: online_4548845f-c1b0-4ecc-8f6c-8cdaafe21108
+2026-04-09 12:37:37,168 - pdf2epub - INFO - Found 18 test cases
+2026-04-09 12:37:37,168 - pdf2epub - INFO - Running test case: Local Article PDF
+2026-04-09 12:37:37,169 - pdf2epub - ERROR - Local PDF file not found: ./test_files/article.pdf
+2026-04-09 12:37:37,169 - pdf2epub - INFO - Test result saved: ./test_output/results/local_2bf84c2f-3f4e-4347-a015-d06307471597.json
+2026-04-09 12:37:37,169 - pdf2epub - INFO - Running test case: Very Small PDF
+2026-04-09 12:37:37,169 - pdf2epub - ERROR - Local PDF file not found: ./test_files/small.pdf
+2026-04-09 12:37:37,169 - pdf2epub - INFO - Test result saved: ./test_output/results/edge_b51ed7d3-440a-48ca-8354-d31604ddabae.json
+2026-04-09 12:37:37,169 - pdf2epub - INFO - Running test case: PDF with Images
+2026-04-09 12:37:37,170 - pdf2epub - ERROR - Local PDF file not found: ./test_files/images.pdf
+2026-04-09 12:37:37,170 - pdf2epub - INFO - Test result saved: ./test_output/results/edge_82550ac8-2687-46d7-bfa8-e758efd56cbe.json
+2026-04-09 12:37:37,170 - pdf2epub - INFO - Running test case: Privacy Policy Sample
+2026-04-09 12:37:37,170 - pdf2epub - INFO - Downloading online PDF: https://www.example.com/privacy-policy.pdf
+2026-04-09 12:37:37,170 - pdf2epub - INFO - Downloading PDF from: https://www.example.com/privacy-policy.pdf
+2026-04-09 12:37:39,173 - pdf2epub - ERROR - Error downloading PDF: HTTPSConnectionPool(host='www.example.com', port=443): Max retries exceeded with url: /privacy-policy.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))
+2026-04-09 12:37:39,173 - pdf2epub - ERROR - Failed to download PDF from https://www.example.com/privacy-policy.pdf
+2026-04-09 12:37:39,173 - pdf2epub - INFO - Test result saved: ./test_output/results/online_709ba353-8658-4f19-84f1-ab0c9e877ea8.json
+2026-04-09 12:37:39,174 - pdf2epub - INFO - Running test case: Empty PDF
+2026-04-09 12:37:39,174 - pdf2epub - ERROR - Local PDF file not found: ./test_files/empty.pdf
+2026-04-09 12:37:39,174 - pdf2epub - INFO - Test result saved: ./test_output/results/edge_9ca95b97-a025-4734-88c9-8e1ed48ed041.json
+2026-04-09 12:37:39,174 - pdf2epub - INFO - Running test case: PDF Reference
+2026-04-09 12:37:39,174 - pdf2epub - INFO - Downloading online PDF: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf
+2026-04-09 12:37:39,174 - pdf2epub - INFO - Downloading PDF from: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf
+2026-04-09 12:37:39,638 - pdf2epub - ERROR - Error downloading PDF: 404 Client Error: Not Found for url: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf
+2026-04-09 12:37:39,639 - pdf2epub - ERROR - Failed to download PDF from https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf
+2026-04-09 12:37:39,640 - pdf2epub - INFO - Test result saved: ./test_output/results/online_f9661b79-d130-441f-af5c-31fcc7bb79f1.json
+2026-04-09 12:37:39,640 - pdf2epub - INFO - Running test case: Local Book PDF
+2026-04-09 12:37:39,640 - pdf2epub - ERROR - Local PDF file not found: ./test_files/book.pdf
+2026-04-09 12:37:39,640 - pdf2epub - INFO - Test result saved: ./test_output/results/local_dc1cdf72-43d7-485f-b453-089605264cbb.json
+2026-04-09 12:37:39,640 - pdf2epub - INFO - Running test case: Very Small PDF
+2026-04-09 12:37:39,640 - pdf2epub - ERROR - Local PDF file not found: ./test_files/small.pdf
+2026-04-09 12:37:39,641 - pdf2epub - INFO - Test result saved: ./test_output/results/edge_b6a68c9c-b63b-4a20-9706-dd798f82dfc7.json
+2026-04-09 12:37:39,641 - pdf2epub - INFO - Running test case: Local Book PDF
+2026-04-09 12:37:39,641 - pdf2epub - ERROR - Local PDF file not found: ./test_files/book.pdf
+2026-04-09 12:37:39,641 - pdf2epub - INFO - Test result saved: ./test_output/results/local_dc53b783-5ee2-4fda-8d13-23a9afe30698.json
+2026-04-09 12:37:39,641 - pdf2epub - INFO - Running test case: Sample PDF Document
+2026-04-09 12:37:39,641 - pdf2epub - INFO - Downloading online PDF: https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf
+2026-04-09 12:37:39,641 - pdf2epub - INFO - PDF already cached: ./download_cache/2b161ce49eab8ac9a3bff3d2f0c09c99.pdf
+2026-04-09 12:37:39,641 - pdf2epub - INFO - Processing PDF: ./download_cache/2b161ce49eab8ac9a3bff3d2f0c09c99.pdf
+2026-04-09 12:37:39,641 - pdf2epub - INFO - Starting PDF processing: ./download_cache/2b161ce49eab8ac9a3bff3d2f0c09c99.pdf
+2026-04-09 12:37:39,641 - pdf2epub - INFO - Step 1: Extracting PDF content...
+2026-04-09 12:37:39,663 - pdf2epub - INFO - Extracted 125 text chunks and 5 images
+2026-04-09 12:37:39,664 - pdf2epub - INFO - Step 2: Processing text...
+2026-04-09 12:37:39,664 - pdf2epub - INFO - Processed 24 paragraphs
+2026-04-09 12:37:39,664 - pdf2epub - INFO - Step 3: Detecting book structure...
+2026-04-09 12:37:39,664 - pdf2epub - INFO - Using heuristic structure detection...
+2026-04-09 12:37:39,665 - pdf2epub - INFO - Detected structure: title='PDF Bookmark Sample Page 1 of 4 PDF BOOKMARK SAMPLE Sample Date: May 2001 Prepared by: Accelio Present Applied Technology Created and Tested Using: • Accelio Present Central 5.4 • Accelio Present Output Designer 5.4 Features Demonstrated: • Primary bookmarks in a PDF file.', author='None', chapters=0
+2026-04-09 12:37:39,665 - pdf2epub - INFO - Step 4: Formatting content...
+2026-04-09 12:37:39,665 - pdf2epub - INFO - Formatted 2 chapters
+2026-04-09 12:37:39,665 - pdf2epub - INFO - Step 5: Generating EPUB...
+2026-04-09 12:37:39,688 - pdf2epub - INFO - EPUB generated successfully: ./test_output/epub/online_da5aa6cf-26e5-403e-bb92-a049a29c1fe8.epub
+2026-04-09 12:37:39,689 - pdf2epub - INFO - Test passed: Sample PDF Document
+2026-04-09 12:37:39,689 - pdf2epub - INFO - Test result saved: ./test_output/results/online_da5aa6cf-26e5-403e-bb92-a049a29c1fe8.json
+2026-04-09 12:37:39,689 - pdf2epub - INFO - Running test case: Local Article PDF
+2026-04-09 12:37:39,689 - pdf2epub - ERROR - Local PDF file not found: ./test_files/article.pdf
+2026-04-09 12:37:39,689 - pdf2epub - INFO - Test result saved: ./test_output/results/local_acc72d6b-4f47-41b2-9fcd-9e32573f4c7b.json
+2026-04-09 12:37:39,690 - pdf2epub - INFO - Running test case: Local Report PDF
+2026-04-09 12:37:39,690 - pdf2epub - ERROR - Local PDF file not found: ./test_files/report.pdf
+2026-04-09 12:37:39,690 - pdf2epub - INFO - Test result saved: ./test_output/results/local_a1e339cb-2125-4ee0-828a-0e67b3268358.json
+2026-04-09 12:37:39,690 - pdf2epub - INFO - Running test case: Empty PDF
+2026-04-09 12:37:39,690 - pdf2epub - ERROR - Local PDF file not found: ./test_files/empty.pdf
+2026-04-09 12:37:39,690 - pdf2epub - INFO - Test result saved: ./test_output/results/edge_2d3bf359-08d6-45e3-b737-c5165e8aa760.json
+2026-04-09 12:37:39,691 - pdf2epub - INFO - Running test case: PDF with Images
+2026-04-09 12:37:39,691 - pdf2epub - ERROR - Local PDF file not found: ./test_files/images.pdf
+2026-04-09 12:37:39,691 - pdf2epub - INFO - Test result saved: ./test_output/results/edge_f0267715-fcdd-4ecf-9d18-fb868bc5eb04.json
+2026-04-09 12:37:39,691 - pdf2epub - INFO - Running test case: Privacy Policy Sample
+2026-04-09 12:37:39,691 - pdf2epub - INFO - Downloading online PDF: https://www.example.com/privacy-policy.pdf
+2026-04-09 12:37:39,691 - pdf2epub - INFO - Downloading PDF from: https://www.example.com/privacy-policy.pdf
+2026-04-09 12:37:42,720 - pdf2epub - ERROR - Error downloading PDF: HTTPSConnectionPool(host='www.example.com', port=443): Max retries exceeded with url: /privacy-policy.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))
+2026-04-09 12:37:42,720 - pdf2epub - ERROR - Failed to download PDF from https://www.example.com/privacy-policy.pdf
+2026-04-09 12:37:42,721 - pdf2epub - INFO - Test result saved: ./test_output/results/online_5e7d2f09-c51d-4f88-931b-fcf20cf009f3.json
+2026-04-09 12:37:42,721 - pdf2epub - INFO - Running test case: Sample PDF Document
+2026-04-09 12:37:42,721 - pdf2epub - INFO - Downloading online PDF: https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf
+2026-04-09 12:37:42,721 - pdf2epub - INFO - PDF already cached: ./download_cache/2b161ce49eab8ac9a3bff3d2f0c09c99.pdf
+2026-04-09 12:37:42,721 - pdf2epub - INFO - Processing PDF: ./download_cache/2b161ce49eab8ac9a3bff3d2f0c09c99.pdf
+2026-04-09 12:37:42,721 - pdf2epub - INFO - Starting PDF processing: ./download_cache/2b161ce49eab8ac9a3bff3d2f0c09c99.pdf
+2026-04-09 12:37:42,721 - pdf2epub - INFO - Step 1: Extracting PDF content...
+2026-04-09 12:37:42,743 - pdf2epub - INFO - Extracted 125 text chunks and 5 images
+2026-04-09 12:37:42,743 - pdf2epub - INFO - Step 2: Processing text...
+2026-04-09 12:37:42,743 - pdf2epub - INFO - Processed 24 paragraphs
+2026-04-09 12:37:42,743 - pdf2epub - INFO - Step 3: Detecting book structure...
+2026-04-09 12:37:42,743 - pdf2epub - INFO - Using heuristic structure detection...
+2026-04-09 12:37:42,743 - pdf2epub - INFO - Detected structure: title='PDF Bookmark Sample Page 1 of 4 PDF BOOKMARK SAMPLE Sample Date: May 2001 Prepared by: Accelio Present Applied Technology Created and Tested Using: • Accelio Present Central 5.4 • Accelio Present Output Designer 5.4 Features Demonstrated: • Primary bookmarks in a PDF file.', author='None', chapters=0
+2026-04-09 12:37:42,744 - pdf2epub - INFO - Step 4: Formatting content...
+2026-04-09 12:37:42,744 - pdf2epub - INFO - Formatted 2 chapters
+2026-04-09 12:37:42,744 - pdf2epub - INFO - Step 5: Generating EPUB...
+2026-04-09 12:37:42,748 - pdf2epub - INFO - EPUB generated successfully: ./test_output/epub/online_9f758548-a90c-420e-a8d5-2f6310633915.epub
+2026-04-09 12:37:42,749 - pdf2epub - INFO - Test passed: Sample PDF Document
+2026-04-09 12:37:42,749 - pdf2epub - INFO - Test result saved: ./test_output/results/online_9f758548-a90c-420e-a8d5-2f6310633915.json
+2026-04-09 12:37:42,749 - pdf2epub - INFO - Running test case: Local Report PDF
+2026-04-09 12:37:42,749 - pdf2epub - ERROR - Local PDF file not found: ./test_files/report.pdf
+2026-04-09 12:37:42,749 - pdf2epub - INFO - Test result saved: ./test_output/results/local_3dbe0adb-e442-4907-a79e-7b57b0d55f4d.json
+2026-04-09 12:37:42,750 - pdf2epub - INFO - Running test case: PDF Reference
+2026-04-09 12:37:42,750 - pdf2epub - INFO - Downloading online PDF: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf
+2026-04-09 12:37:42,750 - pdf2epub - INFO - Downloading PDF from: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf
+2026-04-09 12:37:43,039 - pdf2epub - ERROR - Error downloading PDF: 404 Client Error: Not Found for url: https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf
+2026-04-09 12:37:43,041 - pdf2epub - ERROR - Failed to download PDF from https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf
+2026-04-09 12:37:43,041 - pdf2epub - INFO - Test result saved: ./test_output/results/online_4548845f-c1b0-4ecc-8f6c-8cdaafe21108.json
+2026-04-09 12:37:43,042 - pdf2epub - INFO - Completed 18 tests
+2026-04-09 12:37:43,042 - pdf2epub - INFO - Step 3: Generating test reports...
+2026-04-09 12:37:43,044 - pdf2epub - INFO - EPUB validation completed: ./test_output/epub/online_da5aa6cf-26e5-403e-bb92-a049a29c1fe8.epub
+2026-04-09 12:37:43,044 - pdf2epub - INFO - Valid: True, Errors: 0, Warnings: 0
+2026-04-09 12:37:43,045 - pdf2epub - INFO - EPUB validation completed: ./test_output/epub/online_9f758548-a90c-420e-a8d5-2f6310633915.epub
+2026-04-09 12:37:43,045 - pdf2epub - INFO - Valid: True, Errors: 0, Warnings: 0
+2026-04-09 12:37:43,046 - pdf2epub - INFO - JSON report generated: ./test_reports/test_report_20260409_123743.json
+2026-04-09 12:37:43,046 - pdf2epub - INFO - HTML report generated: ./test_reports/test_report_20260409_123743.html
+2026-04-09 12:37:43,047 - pdf2epub - INFO - Test reports generated: {'json': './test_reports/test_report_20260409_123743.json', 'html': './test_reports/test_report_20260409_123743.html'}
+2026-04-09 12:37:43,047 - pdf2epub - INFO - Step 4: Test suite completed
+2026-04-09 12:37:43,047 - pdf2epub - INFO - Test reports generated:
+2026-04-09 12:37:43,047 - pdf2epub - INFO -   json: ./test_reports/test_report_20260409_123743.json
+2026-04-09 12:37:43,047 - pdf2epub - INFO -   html: ./test_reports/test_report_20260409_123743.html
+2026-04-09 12:37:43,047 - pdf2epub - INFO - 
+Test Summary:
+2026-04-09 12:37:43,047 - pdf2epub - INFO - Total tests: 18
+2026-04-09 12:37:43,047 - pdf2epub - INFO - Passed: 2
+2026-04-09 12:37:43,047 - pdf2epub - INFO - Failed: 16
+2026-04-09 12:37:43,047 - pdf2epub - INFO - Success rate: 11.11%
+2026-04-09 12:37:43,048 - pdf2epub - ERROR - 16 test(s) failed
+2026-04-09 12:39:17,889 - pdf2epub - INFO - Starting PDF to EPUB test suite
+2026-04-09 12:39:17,889 - pdf2epub - INFO - Step 1: Generating test cases...
+2026-04-09 12:39:17,890 - pdf2epub - INFO - Test case loaded: local_2bf84c2f-3f4e-4347-a015-d06307471597
+2026-04-09 12:39:17,890 - pdf2epub - INFO - Test case loaded: edge_b51ed7d3-440a-48ca-8354-d31604ddabae
+2026-04-09 12:39:17,890 - pdf2epub - INFO - Test case loaded: edge_82550ac8-2687-46d7-bfa8-e758efd56cbe
+2026-04-09 12:39:17,890 - pdf2epub - INFO - Test case loaded: online_709ba353-8658-4f19-84f1-ab0c9e877ea8
+2026-04-09 12:39:17,891 - pdf2epub - INFO - Test case loaded: edge_9ca95b97-a025-4734-88c9-8e1ed48ed041
+2026-04-09 12:39:17,891 - pdf2epub - INFO - Test case loaded: online_f9661b79-d130-441f-af5c-31fcc7bb79f1
+2026-04-09 12:39:17,891 - pdf2epub - INFO - Test case loaded: local_dc1cdf72-43d7-485f-b453-089605264cbb
+2026-04-09 12:39:17,891 - pdf2epub - INFO - Test case loaded: edge_b6a68c9c-b63b-4a20-9706-dd798f82dfc7
+2026-04-09 12:39:17,891 - pdf2epub - INFO - Test case loaded: local_dc53b783-5ee2-4fda-8d13-23a9afe30698
+2026-04-09 12:39:17,892 - pdf2epub - INFO - Test case loaded: online_da5aa6cf-26e5-403e-bb92-a049a29c1fe8
+2026-04-09 12:39:17,892 - pdf2epub - INFO - Test case loaded: local_acc72d6b-4f47-41b2-9fcd-9e32573f4c7b
+2026-04-09 12:39:17,892 - pdf2epub - INFO - Test case loaded: local_a1e339cb-2125-4ee0-828a-0e67b3268358
+2026-04-09 12:39:17,892 - pdf2epub - INFO - Test case loaded: edge_2d3bf359-08d6-45e3-b737-c5165e8aa760
+2026-04-09 12:39:17,892 - pdf2epub - INFO - Test case loaded: edge_f0267715-fcdd-4ecf-9d18-fb868bc5eb04
+2026-04-09 12:39:17,893 - pdf2epub - INFO - Test case loaded: online_5e7d2f09-c51d-4f88-931b-fcf20cf009f3
+2026-04-09 12:39:17,893 - pdf2epub - INFO - Test case loaded: online_9f758548-a90c-420e-a8d5-2f6310633915
+2026-04-09 12:39:17,893 - pdf2epub - INFO - Test case loaded: local_3dbe0adb-e442-4907-a79e-7b57b0d55f4d
+2026-04-09 12:39:17,893 - pdf2epub - INFO - Test case loaded: online_4548845f-c1b0-4ecc-8f6c-8cdaafe21108
+2026-04-09 12:39:17,893 - pdf2epub - INFO - Found 18 test cases
+2026-04-09 12:39:17,894 - pdf2epub - INFO - Test case deleted: local_2bf84c2f-3f4e-4347-a015-d06307471597
+2026-04-09 12:39:17,894 - pdf2epub - INFO - Test case deleted: edge_b51ed7d3-440a-48ca-8354-d31604ddabae
+2026-04-09 12:39:17,894 - pdf2epub - INFO - Test case deleted: edge_82550ac8-2687-46d7-bfa8-e758efd56cbe
+2026-04-09 12:39:17,894 - pdf2epub - INFO - Test case deleted: online_709ba353-8658-4f19-84f1-ab0c9e877ea8
+2026-04-09 12:39:17,894 - pdf2epub - INFO - Test case deleted: edge_9ca95b97-a025-4734-88c9-8e1ed48ed041
+2026-04-09 12:39:17,894 - pdf2epub - INFO - Test case deleted: online_f9661b79-d130-441f-af5c-31fcc7bb79f1
+2026-04-09 12:39:17,894 - pdf2epub - INFO - Test case deleted: local_dc1cdf72-43d7-485f-b453-089605264cbb
+2026-04-09 12:39:17,895 - pdf2epub - INFO - Test case deleted: edge_b6a68c9c-b63b-4a20-9706-dd798f82dfc7
+2026-04-09 12:39:17,895 - pdf2epub - INFO - Test case deleted: local_dc53b783-5ee2-4fda-8d13-23a9afe30698
+2026-04-09 12:39:17,895 - pdf2epub - INFO - Test case deleted: online_da5aa6cf-26e5-403e-bb92-a049a29c1fe8
+2026-04-09 12:39:17,895 - pdf2epub - INFO - Test case deleted: local_acc72d6b-4f47-41b2-9fcd-9e32573f4c7b
+2026-04-09 12:39:17,895 - pdf2epub - INFO - Test case deleted: local_a1e339cb-2125-4ee0-828a-0e67b3268358
+2026-04-09 12:39:17,895 - pdf2epub - INFO - Test case deleted: edge_2d3bf359-08d6-45e3-b737-c5165e8aa760
+2026-04-09 12:39:17,896 - pdf2epub - INFO - Test case deleted: edge_f0267715-fcdd-4ecf-9d18-fb868bc5eb04
+2026-04-09 12:39:17,896 - pdf2epub - INFO - Test case deleted: online_5e7d2f09-c51d-4f88-931b-fcf20cf009f3
+2026-04-09 12:39:17,896 - pdf2epub - INFO - Test case deleted: online_9f758548-a90c-420e-a8d5-2f6310633915
+2026-04-09 12:39:17,896 - pdf2epub - INFO - Test case deleted: local_3dbe0adb-e442-4907-a79e-7b57b0d55f4d
+2026-04-09 12:39:17,896 - pdf2epub - INFO - Test case deleted: online_4548845f-c1b0-4ecc-8f6c-8cdaafe21108
+2026-04-09 12:39:17,896 - pdf2epub - INFO - Test case saved: ./test_cases/online_1574a40d-a76a-421a-aa14-0b3d76ef1169.json
+2026-04-09 12:39:17,897 - pdf2epub - INFO - Test case saved: Sample PDF Document
+2026-04-09 12:39:17,897 - pdf2epub - INFO - Generated 1 test cases
+2026-04-09 12:39:17,897 - pdf2epub - INFO - Generated 1 test cases
+2026-04-09 12:39:17,897 - pdf2epub - INFO - Step 2: Running test cases...
+2026-04-09 12:39:17,897 - pdf2epub - INFO - Test case loaded: online_1574a40d-a76a-421a-aa14-0b3d76ef1169
+2026-04-09 12:39:17,897 - pdf2epub - INFO - Found 1 test cases
+2026-04-09 12:39:17,897 - pdf2epub - INFO - Running test case: Sample PDF Document
+2026-04-09 12:39:17,898 - pdf2epub - INFO - Downloading online PDF: https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf
+2026-04-09 12:39:17,898 - pdf2epub - INFO - PDF already cached: ./download_cache/2b161ce49eab8ac9a3bff3d2f0c09c99.pdf
+2026-04-09 12:39:17,898 - pdf2epub - INFO - Processing PDF: ./download_cache/2b161ce49eab8ac9a3bff3d2f0c09c99.pdf
+2026-04-09 12:39:17,898 - pdf2epub - INFO - Starting PDF processing: ./download_cache/2b161ce49eab8ac9a3bff3d2f0c09c99.pdf
+2026-04-09 12:39:17,898 - pdf2epub - INFO - Step 1: Extracting PDF content...
+2026-04-09 12:39:17,921 - pdf2epub - INFO - Extracted 125 text chunks and 5 images
+2026-04-09 12:39:17,922 - pdf2epub - INFO - Step 2: Processing text...
+2026-04-09 12:39:17,922 - pdf2epub - INFO - Processed 24 paragraphs
+2026-04-09 12:39:17,922 - pdf2epub - INFO - Step 3: Detecting book structure...
+2026-04-09 12:39:17,922 - pdf2epub - INFO - Using heuristic structure detection...
+2026-04-09 12:39:17,923 - pdf2epub - INFO - Detected structure: title='PDF Bookmark Sample Page 1 of 4 PDF BOOKMARK SAMPLE Sample Date: May 2001 Prepared by: Accelio Present Applied Technology Created and Tested Using: • Accelio Present Central 5.4 • Accelio Present Output Designer 5.4 Features Demonstrated: • Primary bookmarks in a PDF file.', author='None', chapters=0
+2026-04-09 12:39:17,923 - pdf2epub - INFO - Step 4: Formatting content...
+2026-04-09 12:39:17,923 - pdf2epub - INFO - Formatted 2 chapters
+2026-04-09 12:39:17,923 - pdf2epub - INFO - Step 5: Generating EPUB...
+2026-04-09 12:39:17,946 - pdf2epub - INFO - EPUB generated successfully: ./test_output/epub/online_1574a40d-a76a-421a-aa14-0b3d76ef1169.epub
+2026-04-09 12:39:17,946 - pdf2epub - INFO - Test passed: Sample PDF Document
+2026-04-09 12:39:17,947 - pdf2epub - INFO - Test result saved: ./test_output/results/online_1574a40d-a76a-421a-aa14-0b3d76ef1169.json
+2026-04-09 12:39:17,947 - pdf2epub - INFO - Completed 1 tests
+2026-04-09 12:39:17,947 - pdf2epub - INFO - Step 3: Generating test reports...
+2026-04-09 12:39:17,949 - pdf2epub - INFO - EPUB validation completed: ./test_output/epub/online_1574a40d-a76a-421a-aa14-0b3d76ef1169.epub
+2026-04-09 12:39:17,949 - pdf2epub - INFO - Valid: True, Errors: 0, Warnings: 0
+2026-04-09 12:39:17,949 - pdf2epub - INFO - JSON report generated: ./test_reports/test_report_20260409_123917.json
+2026-04-09 12:39:17,949 - pdf2epub - INFO - HTML report generated: ./test_reports/test_report_20260409_123917.html
+2026-04-09 12:39:17,950 - pdf2epub - INFO - Test reports generated: {'json': './test_reports/test_report_20260409_123917.json', 'html': './test_reports/test_report_20260409_123917.html'}
+2026-04-09 12:39:17,950 - pdf2epub - INFO - Step 4: Test suite completed
+2026-04-09 12:39:17,950 - pdf2epub - INFO - Test reports generated:
+2026-04-09 12:39:17,950 - pdf2epub - INFO -   json: ./test_reports/test_report_20260409_123917.json
+2026-04-09 12:39:17,950 - pdf2epub - INFO -   html: ./test_reports/test_report_20260409_123917.html
+2026-04-09 12:39:17,950 - pdf2epub - INFO - 
+Test Summary:
+2026-04-09 12:39:17,950 - pdf2epub - INFO - Total tests: 1
+2026-04-09 12:39:17,950 - pdf2epub - INFO - Passed: 1
+2026-04-09 12:39:17,950 - pdf2epub - INFO - Failed: 0
+2026-04-09 12:39:17,950 - pdf2epub - INFO - Success rate: 100.00%
+2026-04-09 12:39:17,951 - pdf2epub - INFO - All tests passed!

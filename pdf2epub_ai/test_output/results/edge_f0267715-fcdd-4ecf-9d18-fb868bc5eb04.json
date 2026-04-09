@@ -1,0 +1,10 @@
+{
+  "test_id": "edge_f0267715-fcdd-4ecf-9d18-fb868bc5eb04",
+  "test_name": "PDF with Images",
+  "success": false,
+  "message": "Local PDF file not found: ./test_files/images.pdf",
+  "duration": 0.00018215179443359375,
+  "output_path": null,
+  "error": "Local PDF file not found: ./test_files/images.pdf",
+  "timestamp": 1775738259.6912313
+}

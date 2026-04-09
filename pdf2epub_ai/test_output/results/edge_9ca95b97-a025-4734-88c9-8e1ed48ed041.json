@@ -1,0 +1,10 @@
+{
+  "test_id": "edge_9ca95b97-a025-4734-88c9-8e1ed48ed041",
+  "test_name": "Empty PDF",
+  "success": false,
+  "message": "Local PDF file not found: ./test_files/empty.pdf",
+  "duration": 0.00021886825561523438,
+  "output_path": null,
+  "error": "Local PDF file not found: ./test_files/empty.pdf",
+  "timestamp": 1775738259.1742198
+}

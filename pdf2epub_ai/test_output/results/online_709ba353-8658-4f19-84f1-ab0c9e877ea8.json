@@ -1,0 +1,10 @@
+{
+  "test_id": "online_709ba353-8658-4f19-84f1-ab0c9e877ea8",
+  "test_name": "Privacy Policy Sample",
+  "success": false,
+  "message": "Failed to download PDF from https://www.example.com/privacy-policy.pdf",
+  "duration": 2.0032293796539307,
+  "output_path": null,
+  "error": "Failed to download PDF from https://www.example.com/privacy-policy.pdf",
+  "timestamp": 1775738259.173589
+}

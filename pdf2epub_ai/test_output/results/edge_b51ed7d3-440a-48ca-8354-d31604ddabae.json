@@ -1,0 +1,10 @@
+{
+  "test_id": "edge_b51ed7d3-440a-48ca-8354-d31604ddabae",
+  "test_name": "Very Small PDF",
+  "success": false,
+  "message": "Local PDF file not found: ./test_files/small.pdf",
+  "duration": 0.00019240379333496094,
+  "output_path": null,
+  "error": "Local PDF file not found: ./test_files/small.pdf",
+  "timestamp": 1775738257.169604
+}

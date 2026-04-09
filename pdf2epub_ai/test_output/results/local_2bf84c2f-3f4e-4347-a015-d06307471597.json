@@ -1,0 +1,10 @@
+{
+  "test_id": "local_2bf84c2f-3f4e-4347-a015-d06307471597",
+  "test_name": "Local Article PDF",
+  "success": false,
+  "message": "Local PDF file not found: ./test_files/article.pdf",
+  "duration": 0.00020623207092285156,
+  "output_path": null,
+  "error": "Local PDF file not found: ./test_files/article.pdf",
+  "timestamp": 1775738257.1691115
+}

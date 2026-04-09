@@ -1,0 +1,59 @@
+{
+  "timestamp": 1775738357.9475853,
+  "summary": {
+    "total_tests": 1,
+    "passed": 1,
+    "failed": 0,
+    "success_rate": 100.0,
+    "avg_duration": 0.04892158508300781,
+    "total_duration": 0.04892158508300781
+  },
+  "results": [
+    {
+      "test_id": "online_1574a40d-a76a-421a-aa14-0b3d76ef1169",
+      "test_name": "Sample PDF Document",
+      "success": true,
+      "message": "Conversion completed successfully",
+      "duration": 0.04892158508300781,
+      "output_path": "./test_output/epub/online_1574a40d-a76a-421a-aa14-0b3d76ef1169.epub",
+      "error": null,
+      "timestamp": 1775738357.9470105
+    }
+  ],
+  "detailed_results": [
+    {
+      "test_id": "online_1574a40d-a76a-421a-aa14-0b3d76ef1169",
+      "test_name": "Sample PDF Document",
+      "epub_info": {
+        "epub_path": "./test_output/epub/online_1574a40d-a76a-421a-aa14-0b3d76ef1169.epub",
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "metadata": {
+          "title": "Sample PDF Document",
+          "author": null,
+          "language": "en",
+          "identifier": "pdf2epub",
+          "errors": [],
+          "warnings": [
+            "Author not found"
+          ]
+        },
+        "structure": {
+          "has_mimetype": true,
+          "has_meta_inf": true,
+          "has_content_opf": true,
+          "has_nav": true,
+          "has_ncx": true,
+          "errors": []
+        },
+        "file_size": 26798,
+        "has_chapters": true,
+        "chapter_count": 3,
+        "has_images": true,
+        "image_count": 5,
+        "combined_valid": true
+      }
+    }
+  ]
+}

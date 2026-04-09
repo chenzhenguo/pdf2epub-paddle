@@ -1,0 +1,377 @@
+
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>PDF to EPUB Test Report</title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        margin: 20px;
+                        background-color: #f5f5f5;
+                    }
+                    h1, h2, h3 {
+                        color: #333;
+                    }
+                    .summary {
+                        background-color: #fff;
+                        padding: 20px;
+                        border-radius: 5px;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                        margin-bottom: 20px;
+                    }
+                    .summary-item {
+                        display: inline-block;
+                        margin-right: 30px;
+                        margin-bottom: 10px;
+                    }
+                    .summary-label {
+                        font-weight: bold;
+                        color: #555;
+                    }
+                    .test-results {
+                        background-color: #fff;
+                        padding: 20px;
+                        border-radius: 5px;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    }
+                    .test-case {
+                        border: 1px solid #ddd;
+                        border-radius: 5px;
+                        padding: 15px;
+                        margin-bottom: 15px;
+                    }
+                    .test-case.success {
+                        border-left: 4px solid #4CAF50;
+                    }
+                    .test-case.failure {
+                        border-left: 4px solid #f44336;
+                    }
+                    .test-header {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 10px;
+                    }
+                    .test-name {
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+                    .test-status {
+                        padding: 4px 8px;
+                        border-radius: 3px;
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                    .status-success {
+                        background-color: #4CAF50;
+                        color: white;
+                    }
+                    .status-failure {
+                        background-color: #f44336;
+                        color: white;
+                    }
+                    .test-details {
+                        margin-top: 10px;
+                        font-size: 14px;
+                    }
+                    .test-error {
+                        color: #f44336;
+                        margin-top: 5px;
+                    }
+                    .duration { color: #666; font-size: 12px; }
+                    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+                    th, td { text-align: left; padding: 8px; border-bottom: 1px solid #ddd; }
+                    th { background-color: #f2f2f2; }
+                </style>
+            </head>
+            <body>
+                <h1>PDF to EPUB Test Report</h1>
+                <div class="summary">
+                    <h2>Summary</h2>
+                    <div class="summary-item"><span class="summary-label">Total Tests:</span> 18</div>
+                    <div class="summary-item"><span class="summary-label">Passed:</span> 2</div>
+                    <div class="summary-item"><span class="summary-label">Failed:</span> 16</div>
+                    <div class="summary-item"><span class="summary-label">Success Rate:</span> 11.11%</div>
+                    <div class="summary-item"><span class="summary-label">Average Duration:</span> 0.33s</div>
+                    <div class="summary-item"><span class="summary-label">Total Duration:</span> 5.87s</div>
+                </div>
+                <div class="test-results">
+                    <h2>Test Results</h2>
+            
+                    <div class="test-case failure">
+                        <div class="test-header">
+                            <div class="test-name">Local Article PDF</div>
+                            <div>
+                                <span class="test-status status-failure">FAILED</span>
+                                <span class="duration">(0.00s)</span>
+                            </div>
+                        </div>
+                        <div class="test-details">
+                            <strong>Message:</strong> Local PDF file not found: ./test_files/article.pdf<br>
+                            <div class='test-error'><strong>Error:</strong> Local PDF file not found: ./test_files/article.pdf</div>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="test-case failure">
+                        <div class="test-header">
+                            <div class="test-name">Very Small PDF</div>
+                            <div>
+                                <span class="test-status status-failure">FAILED</span>
+                                <span class="duration">(0.00s)</span>
+                            </div>
+                        </div>
+                        <div class="test-details">
+                            <strong>Message:</strong> Local PDF file not found: ./test_files/small.pdf<br>
+                            <div class='test-error'><strong>Error:</strong> Local PDF file not found: ./test_files/small.pdf</div>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="test-case failure">
+                        <div class="test-header">
+                            <div class="test-name">PDF with Images</div>
+                            <div>
+                                <span class="test-status status-failure">FAILED</span>
+                                <span class="duration">(0.00s)</span>
+                            </div>
+                        </div>
+                        <div class="test-details">
+                            <strong>Message:</strong> Local PDF file not found: ./test_files/images.pdf<br>
+                            <div class='test-error'><strong>Error:</strong> Local PDF file not found: ./test_files/images.pdf</div>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="test-case failure">
+                        <div class="test-header">
+                            <div class="test-name">Privacy Policy Sample</div>
+                            <div>
+                                <span class="test-status status-failure">FAILED</span>
+                                <span class="duration">(2.00s)</span>
+                            </div>
+                        </div>
+                        <div class="test-details">
+                            <strong>Message:</strong> Failed to download PDF from https://www.example.com/privacy-policy.pdf<br>
+                            <div class='test-error'><strong>Error:</strong> Failed to download PDF from https://www.example.com/privacy-policy.pdf</div>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="test-case failure">
+                        <div class="test-header">
+                            <div class="test-name">Empty PDF</div>
+                            <div>
+                                <span class="test-status status-failure">FAILED</span>
+                                <span class="duration">(0.00s)</span>
+                            </div>
+                        </div>
+                        <div class="test-details">
+                            <strong>Message:</strong> Local PDF file not found: ./test_files/empty.pdf<br>
+                            <div class='test-error'><strong>Error:</strong> Local PDF file not found: ./test_files/empty.pdf</div>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="test-case failure">
+                        <div class="test-header">
+                            <div class="test-name">PDF Reference</div>
+                            <div>
+                                <span class="test-status status-failure">FAILED</span>
+                                <span class="duration">(0.47s)</span>
+                            </div>
+                        </div>
+                        <div class="test-details">
+                            <strong>Message:</strong> Failed to download PDF from https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf<br>
+                            <div class='test-error'><strong>Error:</strong> Failed to download PDF from https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf</div>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="test-case failure">
+                        <div class="test-header">
+                            <div class="test-name">Local Book PDF</div>
+                            <div>
+                                <span class="test-status status-failure">FAILED</span>
+                                <span class="duration">(0.00s)</span>
+                            </div>
+                        </div>
+                        <div class="test-details">
+                            <strong>Message:</strong> Local PDF file not found: ./test_files/book.pdf<br>
+                            <div class='test-error'><strong>Error:</strong> Local PDF file not found: ./test_files/book.pdf</div>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="test-case failure">
+                        <div class="test-header">
+                            <div class="test-name">Very Small PDF</div>
+                            <div>
+                                <span class="test-status status-failure">FAILED</span>
+                                <span class="duration">(0.00s)</span>
+                            </div>
+                        </div>
+                        <div class="test-details">
+                            <strong>Message:</strong> Local PDF file not found: ./test_files/small.pdf<br>
+                            <div class='test-error'><strong>Error:</strong> Local PDF file not found: ./test_files/small.pdf</div>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="test-case failure">
+                        <div class="test-header">
+                            <div class="test-name">Local Book PDF</div>
+                            <div>
+                                <span class="test-status status-failure">FAILED</span>
+                                <span class="duration">(0.00s)</span>
+                            </div>
+                        </div>
+                        <div class="test-details">
+                            <strong>Message:</strong> Local PDF file not found: ./test_files/book.pdf<br>
+                            <div class='test-error'><strong>Error:</strong> Local PDF file not found: ./test_files/book.pdf</div>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="test-case success">
+                        <div class="test-header">
+                            <div class="test-name">Sample PDF Document</div>
+                            <div>
+                                <span class="test-status status-success">PASSED</span>
+                                <span class="duration">(0.05s)</span>
+                            </div>
+                        </div>
+                        <div class="test-details">
+                            <strong>Message:</strong> Conversion completed successfully<br>
+                            
+                            <strong>Output:</strong> ./test_output/epub/online_da5aa6cf-26e5-403e-bb92-a049a29c1fe8.epub
+                        </div>
+                    </div>
+                
+                    <div class="test-case failure">
+                        <div class="test-header">
+                            <div class="test-name">Local Article PDF</div>
+                            <div>
+                                <span class="test-status status-failure">FAILED</span>
+                                <span class="duration">(0.00s)</span>
+                            </div>
+                        </div>
+                        <div class="test-details">
+                            <strong>Message:</strong> Local PDF file not found: ./test_files/article.pdf<br>
+                            <div class='test-error'><strong>Error:</strong> Local PDF file not found: ./test_files/article.pdf</div>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="test-case failure">
+                        <div class="test-header">
+                            <div class="test-name">Local Report PDF</div>
+                            <div>
+                                <span class="test-status status-failure">FAILED</span>
+                                <span class="duration">(0.00s)</span>
+                            </div>
+                        </div>
+                        <div class="test-details">
+                            <strong>Message:</strong> Local PDF file not found: ./test_files/report.pdf<br>
+                            <div class='test-error'><strong>Error:</strong> Local PDF file not found: ./test_files/report.pdf</div>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="test-case failure">
+                        <div class="test-header">
+                            <div class="test-name">Empty PDF</div>
+                            <div>
+                                <span class="test-status status-failure">FAILED</span>
+                                <span class="duration">(0.00s)</span>
+                            </div>
+                        </div>
+                        <div class="test-details">
+                            <strong>Message:</strong> Local PDF file not found: ./test_files/empty.pdf<br>
+                            <div class='test-error'><strong>Error:</strong> Local PDF file not found: ./test_files/empty.pdf</div>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="test-case failure">
+                        <div class="test-header">
+                            <div class="test-name">PDF with Images</div>
+                            <div>
+                                <span class="test-status status-failure">FAILED</span>
+                                <span class="duration">(0.00s)</span>
+                            </div>
+                        </div>
+                        <div class="test-details">
+                            <strong>Message:</strong> Local PDF file not found: ./test_files/images.pdf<br>
+                            <div class='test-error'><strong>Error:</strong> Local PDF file not found: ./test_files/images.pdf</div>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="test-case failure">
+                        <div class="test-header">
+                            <div class="test-name">Privacy Policy Sample</div>
+                            <div>
+                                <span class="test-status status-failure">FAILED</span>
+                                <span class="duration">(3.03s)</span>
+                            </div>
+                        </div>
+                        <div class="test-details">
+                            <strong>Message:</strong> Failed to download PDF from https://www.example.com/privacy-policy.pdf<br>
+                            <div class='test-error'><strong>Error:</strong> Failed to download PDF from https://www.example.com/privacy-policy.pdf</div>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="test-case success">
+                        <div class="test-header">
+                            <div class="test-name">Sample PDF Document</div>
+                            <div>
+                                <span class="test-status status-success">PASSED</span>
+                                <span class="duration">(0.03s)</span>
+                            </div>
+                        </div>
+                        <div class="test-details">
+                            <strong>Message:</strong> Conversion completed successfully<br>
+                            
+                            <strong>Output:</strong> ./test_output/epub/online_9f758548-a90c-420e-a8d5-2f6310633915.epub
+                        </div>
+                    </div>
+                
+                    <div class="test-case failure">
+                        <div class="test-header">
+                            <div class="test-name">Local Report PDF</div>
+                            <div>
+                                <span class="test-status status-failure">FAILED</span>
+                                <span class="duration">(0.00s)</span>
+                            </div>
+                        </div>
+                        <div class="test-details">
+                            <strong>Message:</strong> Local PDF file not found: ./test_files/report.pdf<br>
+                            <div class='test-error'><strong>Error:</strong> Local PDF file not found: ./test_files/report.pdf</div>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="test-case failure">
+                        <div class="test-header">
+                            <div class="test-name">PDF Reference</div>
+                            <div>
+                                <span class="test-status status-failure">FAILED</span>
+                                <span class="duration">(0.29s)</span>
+                            </div>
+                        </div>
+                        <div class="test-details">
+                            <strong>Message:</strong> Failed to download PDF from https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf<br>
+                            <div class='test-error'><strong>Error:</strong> Failed to download PDF from https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf</div>
+                            
+                        </div>
+                    </div>
+                
+                </div>
+                <p style="margin-top: 20px; font-size: 12px; color: #666;">
+                    Report generated on 2026-04-09 12:37:43
+                </p>
+            </body>
+            </html>
+            

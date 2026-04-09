@@ -1,0 +1,10 @@
+{
+  "test_id": "local_dc53b783-5ee2-4fda-8d13-23a9afe30698",
+  "test_name": "Local Book PDF",
+  "success": false,
+  "message": "Local PDF file not found: ./test_files/book.pdf",
+  "duration": 0.00010037422180175781,
+  "output_path": null,
+  "error": "Local PDF file not found: ./test_files/book.pdf",
+  "timestamp": 1775738259.641174
+}

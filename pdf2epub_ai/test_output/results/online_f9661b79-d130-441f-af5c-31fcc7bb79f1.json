@@ -1,0 +1,10 @@
+{
+  "test_id": "online_f9661b79-d130-441f-af5c-31fcc7bb79f1",
+  "test_name": "PDF Reference",
+  "success": false,
+  "message": "Failed to download PDF from https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf",
+  "duration": 0.4656398296356201,
+  "output_path": null,
+  "error": "Failed to download PDF from https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf",
+  "timestamp": 1775738259.640138
+}

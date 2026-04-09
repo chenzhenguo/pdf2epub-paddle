@@ -1,0 +1,263 @@
+{
+  "timestamp": 1775738263.0424747,
+  "summary": {
+    "total_tests": 18,
+    "passed": 2,
+    "failed": 16,
+    "success_rate": 11.11111111111111,
+    "avg_duration": 0.32597431871626115,
+    "total_duration": 5.8675377368927
+  },
+  "results": [
+    {
+      "test_id": "local_2bf84c2f-3f4e-4347-a015-d06307471597",
+      "test_name": "Local Article PDF",
+      "success": false,
+      "message": "Local PDF file not found: ./test_files/article.pdf",
+      "duration": 0.00020623207092285156,
+      "output_path": null,
+      "error": "Local PDF file not found: ./test_files/article.pdf",
+      "timestamp": 1775738257.1691115
+    },
+    {
+      "test_id": "edge_b51ed7d3-440a-48ca-8354-d31604ddabae",
+      "test_name": "Very Small PDF",
+      "success": false,
+      "message": "Local PDF file not found: ./test_files/small.pdf",
+      "duration": 0.00019240379333496094,
+      "output_path": null,
+      "error": "Local PDF file not found: ./test_files/small.pdf",
+      "timestamp": 1775738257.169604
+    },
+    {
+      "test_id": "edge_82550ac8-2687-46d7-bfa8-e758efd56cbe",
+      "test_name": "PDF with Images",
+      "success": false,
+      "message": "Local PDF file not found: ./test_files/images.pdf",
+      "duration": 0.00018858909606933594,
+      "output_path": null,
+      "error": "Local PDF file not found: ./test_files/images.pdf",
+      "timestamp": 1775738257.1700838
+    },
+    {
+      "test_id": "online_709ba353-8658-4f19-84f1-ab0c9e877ea8",
+      "test_name": "Privacy Policy Sample",
+      "success": false,
+      "message": "Failed to download PDF from https://www.example.com/privacy-policy.pdf",
+      "duration": 2.0032293796539307,
+      "output_path": null,
+      "error": "Failed to download PDF from https://www.example.com/privacy-policy.pdf",
+      "timestamp": 1775738259.173589
+    },
+    {
+      "test_id": "edge_9ca95b97-a025-4734-88c9-8e1ed48ed041",
+      "test_name": "Empty PDF",
+      "success": false,
+      "message": "Local PDF file not found: ./test_files/empty.pdf",
+      "duration": 0.00021886825561523438,
+      "output_path": null,
+      "error": "Local PDF file not found: ./test_files/empty.pdf",
+      "timestamp": 1775738259.1742198
+    },
+    {
+      "test_id": "online_f9661b79-d130-441f-af5c-31fcc7bb79f1",
+      "test_name": "PDF Reference",
+      "success": false,
+      "message": "Failed to download PDF from https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf",
+      "duration": 0.4656398296356201,
+      "output_path": null,
+      "error": "Failed to download PDF from https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf",
+      "timestamp": 1775738259.640138
+    },
+    {
+      "test_id": "local_dc1cdf72-43d7-485f-b453-089605264cbb",
+      "test_name": "Local Book PDF",
+      "success": false,
+      "message": "Local PDF file not found: ./test_files/book.pdf",
+      "duration": 0.00011396408081054688,
+      "output_path": null,
+      "error": "Local PDF file not found: ./test_files/book.pdf",
+      "timestamp": 1775738259.6405377
+    },
+    {
+      "test_id": "edge_b6a68c9c-b63b-4a20-9706-dd798f82dfc7",
+      "test_name": "Very Small PDF",
+      "success": false,
+      "message": "Local PDF file not found: ./test_files/small.pdf",
+      "duration": 0.00016117095947265625,
+      "output_path": null,
+      "error": "Local PDF file not found: ./test_files/small.pdf",
+      "timestamp": 1775738259.640875
+    },
+    {
+      "test_id": "local_dc53b783-5ee2-4fda-8d13-23a9afe30698",
+      "test_name": "Local Book PDF",
+      "success": false,
+      "message": "Local PDF file not found: ./test_files/book.pdf",
+      "duration": 0.00010037422180175781,
+      "output_path": null,
+      "error": "Local PDF file not found: ./test_files/book.pdf",
+      "timestamp": 1775738259.641174
+    },
+    {
+      "test_id": "online_da5aa6cf-26e5-403e-bb92-a049a29c1fe8",
+      "test_name": "Sample PDF Document",
+      "success": true,
+      "message": "Conversion completed successfully",
+      "duration": 0.047754526138305664,
+      "output_path": "./test_output/epub/online_da5aa6cf-26e5-403e-bb92-a049a29c1fe8.epub",
+      "error": null,
+      "timestamp": 1775738259.6892252
+    },
+    {
+      "test_id": "local_acc72d6b-4f47-41b2-9fcd-9e32573f4c7b",
+      "test_name": "Local Article PDF",
+      "success": false,
+      "message": "Local PDF file not found: ./test_files/article.pdf",
+      "duration": 0.00020265579223632812,
+      "output_path": null,
+      "error": "Local PDF file not found: ./test_files/article.pdf",
+      "timestamp": 1775738259.6897678
+    },
+    {
+      "test_id": "local_a1e339cb-2125-4ee0-828a-0e67b3268358",
+      "test_name": "Local Report PDF",
+      "success": false,
+      "message": "Local PDF file not found: ./test_files/report.pdf",
+      "duration": 0.00021147727966308594,
+      "output_path": null,
+      "error": "Local PDF file not found: ./test_files/report.pdf",
+      "timestamp": 1775738259.6902778
+    },
+    {
+      "test_id": "edge_2d3bf359-08d6-45e3-b737-c5165e8aa760",
+      "test_name": "Empty PDF",
+      "success": false,
+      "message": "Local PDF file not found: ./test_files/empty.pdf",
+      "duration": 0.00020360946655273438,
+      "output_path": null,
+      "error": "Local PDF file not found: ./test_files/empty.pdf",
+      "timestamp": 1775738259.6907272
+    },
+    {
+      "test_id": "edge_f0267715-fcdd-4ecf-9d18-fb868bc5eb04",
+      "test_name": "PDF with Images",
+      "success": false,
+      "message": "Local PDF file not found: ./test_files/images.pdf",
+      "duration": 0.00018215179443359375,
+      "output_path": null,
+      "error": "Local PDF file not found: ./test_files/images.pdf",
+      "timestamp": 1775738259.6912313
+    },
+    {
+      "test_id": "online_5e7d2f09-c51d-4f88-931b-fcf20cf009f3",
+      "test_name": "Privacy Policy Sample",
+      "success": false,
+      "message": "Failed to download PDF from https://www.example.com/privacy-policy.pdf",
+      "duration": 3.0292603969573975,
+      "output_path": null,
+      "error": "Failed to download PDF from https://www.example.com/privacy-policy.pdf",
+      "timestamp": 1775738262.7207594
+    },
+    {
+      "test_id": "online_9f758548-a90c-420e-a8d5-2f6310633915",
+      "test_name": "Sample PDF Document",
+      "success": true,
+      "message": "Conversion completed successfully",
+      "duration": 0.02786111831665039,
+      "output_path": "./test_output/epub/online_9f758548-a90c-420e-a8d5-2f6310633915.epub",
+      "error": null,
+      "timestamp": 1775738262.7491584
+    },
+    {
+      "test_id": "local_3dbe0adb-e442-4907-a79e-7b57b0d55f4d",
+      "test_name": "Local Report PDF",
+      "success": false,
+      "message": "Local PDF file not found: ./test_files/report.pdf",
+      "duration": 0.00022029876708984375,
+      "output_path": null,
+      "error": "Local PDF file not found: ./test_files/report.pdf",
+      "timestamp": 1775738262.749731
+    },
+    {
+      "test_id": "online_4548845f-c1b0-4ecc-8f6c-8cdaafe21108",
+      "test_name": "PDF Reference",
+      "success": false,
+      "message": "Failed to download PDF from https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf",
+      "duration": 0.29159069061279297,
+      "output_path": null,
+      "error": "Failed to download PDF from https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf",
+      "timestamp": 1775738263.041672
+    }
+  ],
+  "detailed_results": [
+    {
+      "test_id": "online_da5aa6cf-26e5-403e-bb92-a049a29c1fe8",
+      "test_name": "Sample PDF Document",
+      "epub_info": {
+        "epub_path": "./test_output/epub/online_da5aa6cf-26e5-403e-bb92-a049a29c1fe8.epub",
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "metadata": {
+          "title": "Sample PDF Document",
+          "author": null,
+          "language": "en",
+          "identifier": "pdf2epub",
+          "errors": [],
+          "warnings": [
+            "Author not found"
+          ]
+        },
+        "structure": {
+          "has_mimetype": true,
+          "has_meta_inf": true,
+          "has_content_opf": true,
+          "has_nav": true,
+          "has_ncx": true,
+          "errors": []
+        },
+        "file_size": 26798,
+        "has_chapters": true,
+        "chapter_count": 3,
+        "has_images": true,
+        "image_count": 5,
+        "combined_valid": true
+      }
+    },
+    {
+      "test_id": "online_9f758548-a90c-420e-a8d5-2f6310633915",
+      "test_name": "Sample PDF Document",
+      "epub_info": {
+        "epub_path": "./test_output/epub/online_9f758548-a90c-420e-a8d5-2f6310633915.epub",
+        "valid": true,
+        "errors": [],
+        "warnings": [],
+        "metadata": {
+          "title": "Sample PDF Document",
+          "author": null,
+          "language": "en",
+          "identifier": "pdf2epub",
+          "errors": [],
+          "warnings": [
+            "Author not found"
+          ]
+        },
+        "structure": {
+          "has_mimetype": true,
+          "has_meta_inf": true,
+          "has_content_opf": true,
+          "has_nav": true,
+          "has_ncx": true,
+          "errors": []
+        },
+        "file_size": 26798,
+        "has_chapters": true,
+        "chapter_count": 3,
+        "has_images": true,
+        "image_count": 5,
+        "combined_valid": true
+      }
+    }
+  ]
+}

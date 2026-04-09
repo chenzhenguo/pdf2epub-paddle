@@ -1,0 +1,10 @@
+{
+  "test_id": "local_3dbe0adb-e442-4907-a79e-7b57b0d55f4d",
+  "test_name": "Local Report PDF",
+  "success": false,
+  "message": "Local PDF file not found: ./test_files/report.pdf",
+  "duration": 0.00022029876708984375,
+  "output_path": null,
+  "error": "Local PDF file not found: ./test_files/report.pdf",
+  "timestamp": 1775738262.749731
+}
