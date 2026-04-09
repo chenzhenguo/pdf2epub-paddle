@@ -1,0 +1,263 @@
+# PDF to EPUB Converter Web Application - Architecture Design Document
+
+## 1. Overall Architecture
+
+### 1.1 System Overview
+
+The PDF to EPUB Converter Web Application is a full-stack web application that converts PDF files to EPUB format using PyMuPDF for text extraction and optional LLM integration for enhanced formatting. The application follows a modular architecture with clear separation between frontend and backend components.
+
+### 1.2 Architecture Diagram
+
+```mermaid
+flowchart TD
+    subgraph Frontend
+        A[User Interface] --> B[HTML Templates]
+        B --> C[Static Files]
+    end
+
+    subgraph Backend
+        D[FastAPI Application] --> E[API Endpoints]
+        E --> F[PDF Processor]
+        F --> G[EPUB Generator]
+        F --> H[LLM Processor]
+    end
+
+    subgraph External Services
+        I[PaddleOCR API]
+        J[OpenAI API]
+    end
+
+    A -->|File Upload| E
+    E -->|Process PDF| F
+    F -->|Generate EPUB| G
+    F -->|Format Text| H
+    H -->|API Call| J
+    F -->|Optional API Call| I
+    E -->|Return EPUB| A
+```
+
+### 1.3 Component Relationships
+
+- **Frontend**: Handles user interaction, file uploads, and display of results
+- **Backend**: Processes PDF files, generates EPUB files, and integrates with external APIs
+- **External Services**: Provide OCR and LLM capabilities for enhanced processing
+
+## 2. Frontend Architecture
+
+### 2.1 Components
+
+- **HTML Templates**: Jinja2 templates for rendering the user interface
+- **Static Files**: CSS styles and other static resources
+- **User Interface**: Form for file upload, API token input, and conversion options
+
+### 2.2 File Structure
+
+```
+webapp/app/
+├── static/
+│   └── style.css      # CSS styles for the application
+└── templates/
+    └── index.html     # Main page template
+```
+
+### 2.3 User Interface Flow
+
+1. User accesses the application
+2. User uploads a PDF file
+3. User enters API tokens (PaddleOCR and optionally OpenAI)
+4. User configures conversion options (title, author, TOC generation)
+5. User submits the form
+6. Application processes the PDF and generates EPUB
+7. User downloads the generated EPUB file
+
+## 3. Backend Architecture
+
+### 3.1 Components
+
+- **FastAPI Application**: Main application framework
+- **API Endpoints**: RESTful endpoints for file upload and processing
+- **PDF Processor**: Handles PDF extraction and processing
+- **EPUB Generator**: Generates EPUB files from processed content
+- **LLM Processor**: Integrates with OpenAI API for enhanced text formatting
+- **Configuration**: Manages environment variables and application settings
+
+### 3.2 API Endpoints
+
+- **GET /**: Renders the main page
+- **POST /convert**: Processes uploaded PDF files and returns EPUB files
+
+### 3.3 File Structure
+
+```
+webapp/app/
+├── main.py            # FastAPI application and endpoints
+├── config.py          # Configuration settings
+└── utils/
+    ├── pdf_processor.py     # PDF processing logic
+    ├── epub_generator.py    # EPUB generation logic
+    └── llm_processor.py     # LLM integration logic
+```
+
+### 3.4 Configuration
+
+The application uses environment variables for configuration, including:
+- `PADDLE_API_TOKEN`: API token for PaddleOCR API
+- `LLM_API_KEY`: API key for OpenAI API (optional)
+- `LLM_MODEL`: LLM model to use (default: gpt-4o)
+
+## 4. PDF Processing Workflow
+
+### 4.1 Process Overview
+
+1. **PDF Extraction**: Extract text and images from PDF using PyMuPDF
+2. **Text Cleaning**: Clean and process extracted text
+3. **Structure Detection**: Detect book structure (title, author, chapters)
+4. **Text Formatting**: Format text for better readability
+5. **EPUB Generation**: Generate EPUB file from processed content
+
+### 4.2 Detailed Workflow
+
+```mermaid
+flowchart TD
+    A[PDF Upload] --> B[Extract Text and Images]
+    B --> C[Clean Text]
+    C --> D{LLM Enabled?}
+    D -->|Yes| E[LLM Structure Detection]
+    D -->|No| F[Heuristic Structure Detection]
+    E --> G[LLM Text Formatting]
+    F --> H[Basic Text Formatting]
+    G --> I[Generate EPUB]
+    H --> I
+    I --> J[Return EPUB File]
+```
+
+### 4.3 Key Functions
+
+- `extract_pdf_content()`: Extracts text and images from PDF
+- `clean_text()`: Cleans and processes extracted text
+- `detect_book_structure()`: Detects book structure using heuristics
+- `process_pdf()`: Main processing function
+- `generate_epub()`: Generates EPUB file
+
+## 5. LLM Integration Architecture
+
+### 5.1 Overview
+
+The LLM integration provides enhanced text formatting and structure detection capabilities. It uses the OpenAI API to process text and improve the quality of the generated EPUB.
+
+### 5.2 Components
+
+- **LLMProcessor**: Handles communication with OpenAI API
+- **Structure Detection**: Uses LLM to detect book structure
+- **Text Formatting**: Uses LLM to format text for better readability
+- **Fallback Mechanism**: Falls back to heuristic methods if LLM is not available
+
+### 5.3 Workflow
+
+1. **API Key Validation**: Check if LLM API key is provided
+2. **Structure Detection**: Use LLM to analyze text and detect structure
+3. **Text Formatting**: Use LLM to format text for better readability
+4. **Fallback**: Use heuristic methods if LLM API call fails
+
+### 5.4 Key Functions
+
+- `detect_book_structure()`: Uses LLM to detect book structure
+- `format_paragraphs()`: Uses LLM to format text
+- `generate_toc()`: Uses LLM to generate table of contents
+
+## 6. Data Flow
+
+### 6.1 Overall Data Flow
+
+```mermaid
+sequenceDiagram
+    participant User as User
+    participant Frontend as Frontend
+    participant Backend as Backend
+    participant PDFProcessor as PDF Processor
+    participant LLM as LLM Processor
+    participant EPUBGenerator as EPUB Generator
+
+    User->>Frontend: Upload PDF File
+    User->>Frontend: Enter API Tokens
+    User->>Frontend: Configure Options
+    Frontend->>Backend: POST /convert
+    Backend->>PDFProcessor: Extract PDF Content
+    PDFProcessor->>PDFProcessor: Clean Text
+    PDFProcessor->>LLM: Detect Structure (if LLM enabled)
+    LLM-->>PDFProcessor: Return Structure
+    PDFProcessor->>LLM: Format Text (if LLM enabled)
+    LLM-->>PDFProcessor: Return Formatted Text
+    PDFProcessor->>EPUBGenerator: Generate EPUB
+    EPUBGenerator-->>Backend: Return EPUB File
+    Backend-->>Frontend: Return EPUB File
+    Frontend-->>User: Download EPUB File
+```
+
+### 6.2 Data Transformation
+
+1. **PDF to Text**: Extract text and images from PDF
+2. **Text to Structured Content**: Detect book structure and format text
+3. **Structured Content to EPUB**: Generate EPUB file from structured content
+
+## 7. Design Decisions and Best Practices
+
+### 7.1 Key Design Decisions
+
+- **Modular Architecture**: Clear separation of concerns between components
+- **Optional LLM Integration**: LLM is optional, with fallback to heuristic methods
+- **Temporary File Management**: Automatic cleanup of temporary files
+- **Error Handling**: Comprehensive error handling with user feedback
+- **Configuration Management**: Environment variables for configuration
+
+### 7.2 Best Practices Followed
+
+- **Code Organization**: Clear directory structure and modular code
+- **Error Handling**: Graceful error handling and user feedback
+- **Security**: Secure handling of API tokens
+- **Performance**: Efficient processing of PDF files
+- **Maintainability**: Well-documented code and architecture
+
+### 7.3 Rationale
+
+- **FastAPI**: Chosen for its performance, documentation, and ease of use
+- **PyMuPDF**: Chosen for its efficient PDF extraction capabilities
+- **EbookLib**: Chosen for its comprehensive EPUB generation features
+- **LLM Integration**: Added to improve text formatting and structure detection
+
+## 8. Integration Points
+
+### 8.1 External APIs
+
+- **PaddleOCR API**: Optional for OCR capabilities
+- **OpenAI API**: Optional for enhanced text formatting and structure detection
+
+### 8.2 Internal Integration
+
+- **Frontend-Backend**: RESTful API for file upload and processing
+- **PDF Processor-EPUB Generator**: Data transfer for EPUB generation
+- **PDF Processor-LLM Processor**: Data transfer for enhanced processing
+
+## 9. Future Enhancements
+
+### 9.1 Potential Improvements
+
+- **Support for more LLM providers**
+- **Enhanced OCR capabilities**
+- **User authentication and session management**
+- **Batch processing of multiple PDF files**
+- **Custom EPUB styling options**
+- **Progress tracking for large files**
+
+### 9.2 Scaling Considerations
+
+- **Horizontal Scaling**: Deploy multiple instances for increased capacity
+- **Caching**: Cache frequently processed content
+- **Asynchronous Processing**: Process large files asynchronously
+- **Load Balancing**: Distribute requests across multiple instances
+
+## 10. Conclusion
+
+The PDF to EPUB Converter Web Application follows a modular, well-structured architecture that provides a robust solution for converting PDF files to EPUB format. The optional LLM integration enhances the quality of the generated EPUB by providing better text formatting and structure detection. The architecture is designed to be maintainable, scalable, and extensible, with clear separation of concerns and well-defined integration points.
+
+This architecture documentation serves as a reference for developers, stakeholders, and contributors to understand the system design and make informed decisions about future enhancements and maintenance.
