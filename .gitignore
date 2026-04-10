@@ -1,30 +1,24 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Virtual Environment
-.venv/
-venv/
-env/
+node_modules
+dist
+dist-ssr
+*.local
 
-# Mac OS
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-
-# IDEs
-.vscode/
-.idea/
-
-# Project Specific
-paddle_epub_work/
-*.pdf.json
-*.epub
-output/
-*.pdf
-
-# PaddleOCR Tooling
-paddle_epub_work_*/
-.venv/
-debug_api_error.json
-debug_last_response.json
-.env
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
