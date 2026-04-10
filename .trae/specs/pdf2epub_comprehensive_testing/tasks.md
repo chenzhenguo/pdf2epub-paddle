@@ -80,10 +80,10 @@
   - `programmatic` TR-5.4: Validation results are recorded
 - **Notes**: Use ebooklib for structural validation
 
-## [/] Task 6: Implement advanced test reporting system
+## [x] Task 6: Implement advanced test reporting system
 - **Priority**: P1
 - **Depends On**: Task 5
-- **Description**: 
+- **Description**:
   - Create comprehensive test report generator
   - Implement HTML, JSON, and CSV report formats
   - Add detailed summary statistics
@@ -96,7 +96,7 @@
   - `human-judgment` TR-6.4: Reports are easy to understand
 - **Notes**: Include both detailed and summary views
 
-## [ ] Task 7: Establish end-to-end test flow
+## [/] Task 7: Establish end-to-end test flow
 - **Priority**: P0
 - **Depends On**: Task 6
 - **Description**: 
